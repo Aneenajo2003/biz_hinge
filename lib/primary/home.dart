@@ -54,6 +54,13 @@ class Home extends StatelessWidget {
       }
     },
   );
+  // Mapping categories to their respective pages
+  final Map<String, Widget Function(BuildContext)> categoryPages = {
+    'Category1': (context) => CategoryPage1(),
+    'Category2': (context) => CategoryPage2(),
+
+  };
+
 
   @override
   Widget build(BuildContext context) {
@@ -144,79 +151,86 @@ class Home extends StatelessWidget {
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 30),
-                child: SizedBox(
-                  height: 120,
-                  child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: categories.length,
-                    itemBuilder: (context, index) {
-                      return GestureDetector(
-                        onTap: () {
+            Padding(
+              padding: const EdgeInsets.only(left: 30),
+              child: SizedBox(
+                height: 120,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: categories.length,
+                  itemBuilder: (context, index) {
+                    return GestureDetector(
+                      onTap: () {
+                        final categoryLabel = categories[index].label;
+                        final pageBuilder = categoryPages[categoryLabel];
+
+                        if (pageBuilder != null) {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  CategoryDetails(category: categories[index]),
-                            ),
+                            MaterialPageRoute(builder: pageBuilder),
                           );
-                        },
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 10),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
-                                width: 80,
-                                height: 80,
-                                decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(15),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black12,
-                                      blurRadius: 5,
-                                      offset: Offset(0, 2),
-                                    ),
-                                  ],
-                                ),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Container(
-                                      width: 30,
-                                      height: 30,
-                                      decoration: BoxDecoration(
-                                        color: Colors.white,
-                                        shape: BoxShape.rectangle,
-                                      ),
-                                      child: Image.asset(
-                                        categories[index].image,
-                                        fit: BoxFit.contain,
-                                      ),
-                                    ),
-                                    const SizedBox(height: 10),
-                                    Text(
-                                      categories[index].label,
-                                      style: GoogleFonts.poppins(
-                                        fontSize: 10,
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.black,
-                                      ),
-                                    ),
-                                  ],
-                                ),
+                        } else {
+                          // Handle case where the page is not found, if needed
+                          print("Page not found for category: $categoryLabel");
+                        }
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              width: 80,
+                              height: 80,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(15),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black12,
+                                    blurRadius: 5,
+                                    offset: Offset(0, 2),
+                                  ),
+                                ],
                               ),
-                            ],
-                          ),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Container(
+                                    width: 30,
+                                    height: 30,
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      shape: BoxShape.rectangle,
+                                    ),
+                                    child: Image.asset(
+                                      categories[index].image,
+                                      fit: BoxFit.contain,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 10),
+                                  Text(
+                                    categories[index].label,
+                                    style: GoogleFonts.poppins(
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.black,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
                         ),
-                      );
-                    },
-                  ),
+                      ),
+                    );
+                  },
                 ),
               ),
-              const SizedBox(height: 10),
+            ),
+
+
+            const SizedBox(height: 10),
               Padding(
                 padding: const EdgeInsets.only(left: 20),
                 child: Align(

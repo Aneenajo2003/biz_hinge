@@ -18,6 +18,11 @@ class _SearchState extends State<Search> {
     Category(image: "assests/image/img_3.png", label: "Natural care"),
 
   ];
+  final Map<String, Widget Function(BuildContext)> categoryPages = {
+    'Category1': (context) => CategoryPage1(),
+    'Category2': (context) => CategoryPage2(),
+
+  };
 
   List<Category> filteredCategories = [];
   final TextEditingController _searchController = TextEditingController();
@@ -142,14 +147,18 @@ class _SearchState extends State<Search> {
                 itemBuilder: (context, index) {
                   return GestureDetector(
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => CategoryDetails(
-                            category: filteredCategories[index],
-                          ),
-                        ),
-                      );
+                      final categoryLabel = categories[index].label;
+                      final pageBuilder = categoryPages[categoryLabel];
+
+                      if (pageBuilder != null) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: pageBuilder),
+                        );
+                      } else {
+                        // Handle case where the page is not found, if needed
+                        print("Page not found for category: $categoryLabel");
+                      }
                     },
                     child: Padding(
                       padding: EdgeInsets.symmetric(horizontal: 10),
