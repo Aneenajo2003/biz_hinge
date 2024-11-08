@@ -15,14 +15,9 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return ScreenUtilInit(
-      designSize: Size(375, 812),
-      builder: (context, child) {
-        return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          home: const MyHomePage(),
-        );
-      },
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: const MyHomePage(),
     );
   }
 }
@@ -65,23 +60,23 @@ class _MyHomePageState extends State<MyHomePage> {
         child: pages[currentIndex],
       ),
       bottomNavigationBar: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 8.h),
+        padding: EdgeInsets.symmetric(horizontal: 15, vertical: 8),
         child: GNav(
           rippleColor: Colors.transparent,
           hoverColor: Colors.transparent,
           haptic: true,
-          tabBorderRadius: 30.r, // Scaled value
+          tabBorderRadius: 30, // Scaled value
           tabActiveBorder: Border.all(color: Colors.transparent),
           tabBorder: Border.all(color: Colors.transparent),
           tabShadow: [],
           curve: Curves.easeOutExpo,
           duration: Duration(milliseconds: 100),
-          gap: 8.w, // Use ScreenUtil scaling
+          gap: 8, // Use ScreenUtil scaling
           color: Colors.grey[800],
           activeColor: Color(0xff005511),
-          iconSize: 24.sp,
+          iconSize: 24,
           tabBackgroundColor: Color(0xff6EBC31).withOpacity(0.42),
-          padding: EdgeInsets.symmetric(horizontal: 6.w, vertical: 5.h),
+          padding: EdgeInsets.symmetric(horizontal: 6, vertical: 5),
           selectedIndex: currentIndex,
           onTabChange: (index) {
             setState(() {

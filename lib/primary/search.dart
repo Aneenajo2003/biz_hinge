@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 import '../main.dart';
+import '../secondary/categorydetail.dart';
 import 'home.dart';
 
 class Search extends StatefulWidget {
@@ -13,12 +14,8 @@ class Search extends StatefulWidget {
 
 class _SearchState extends State<Search> {
   final List<Category> categories = [
-    Category(image: "assests/image/img_1.png", label: "Thailam"),
-    Category(image: "assests/image/img_1.png", label: "Body Lotion"),
-    Category(image: "assests/image/img_1.png", label: "Face Wash"),
-    Category(image: "assests/image/img_1.png", label: "Shampoo"),
-    Category(image: "assests/image/img_1.png", label: "Conditioner"),
-    Category(image: "assests/image/img_1.png", label: "Soap"),
+    Category(image: "assests/image/img_4.png", label: "Health care"),
+    Category(image: "assests/image/img_3.png", label: "Natural care"),
 
   ];
 
@@ -130,7 +127,7 @@ class _SearchState extends State<Search> {
                 child: Text(
                   'No results found',
                   style: GoogleFonts.poppins(
-                    fontSize: 16.sp,
+                    fontSize: 16,
                     fontWeight: FontWeight.w500,
                     color: Colors.grey,
                   ),
@@ -138,7 +135,7 @@ class _SearchState extends State<Search> {
               ),
             )
                 : SizedBox(
-              height: 200.h,
+              height: 200,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: filteredCategories.length,
@@ -155,16 +152,16 @@ class _SearchState extends State<Search> {
                       );
                     },
                     child: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 10.w),
+                      padding: EdgeInsets.symmetric(horizontal: 10),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Container(
-                            width: 65.w,
-                            height: 90.h,
+                            width: 80,
+                            height: 80,
                             decoration: BoxDecoration(
                               color: Colors.white,
-                              borderRadius: BorderRadius.circular(15.r),
+                              borderRadius: BorderRadius.circular(15),
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.black12,
@@ -173,31 +170,34 @@ class _SearchState extends State<Search> {
                                 ),
                               ],
                             ),
-                            child: Center(
-                              child: Container(
-                                width: 60.w,
-                                height: 60.h,
-                                decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  shape: BoxShape.circle,
-                                  image: DecorationImage(
-                                    image: AssetImage(
-                                        filteredCategories[index].image),
-                                    fit: BoxFit.cover,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+                                  width: 30,
+                                  height: 30,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    shape: BoxShape.rectangle,
+                                  ),
+                                  child: Image.asset(
+                                    categories[index].image,
+                                    fit: BoxFit.contain,
                                   ),
                                 ),
-                              ),
+                                const SizedBox(height: 10),
+                                Text(
+                                  categories[index].label,
+                                  style: GoogleFonts.poppins(
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
-                          SizedBox(height: 5.h),
-                          Text(
-                            filteredCategories[index].label,
-                            style: GoogleFonts.poppins(
-                              fontSize: 10.sp,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.black,
-                            ),
-                          ),
+
                         ],
                       ),
                     ),
