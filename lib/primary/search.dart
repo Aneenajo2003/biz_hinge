@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../main.dart';
 import '../secondary/categorydetail.dart';
+import '../secondary/healthcare_catdetals.dart';
+import '../secondary/naturalcare_detail.dart';
 import 'home.dart';
 
 class Search extends StatefulWidget {
@@ -18,10 +20,9 @@ class _SearchState extends State<Search> {
     Category(image: "assests/image/img_3.png", label: "Natural care"),
 
   ];
-  final Map<String, Widget Function(BuildContext)> categoryPages = {
-    'Category1': (context) => CategoryPage1(),
-    'Category2': (context) => CategoryPage2(),
-
+  final Map<String, WidgetBuilder> categoryPages = {
+    'Health care': (context) => HealthDetail(),
+    'Natural care': (context) => NaturalDetail(),
   };
 
   List<Category> filteredCategories = [];

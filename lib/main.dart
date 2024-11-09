@@ -2,6 +2,7 @@ import 'package:b2bapp/primary/cart.dart';
 import 'package:b2bapp/primary/home.dart';
 import 'package:b2bapp/primary/profile.dart';
 import 'package:b2bapp/primary/search.dart';
+import 'package:b2bapp/secondary/naturalcare_detail.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -34,7 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
   List<Widget> pages = [];
 
   Future<void> _openWhatsApp() async {
-    final Uri whatsappUri = Uri.parse("https://wa.me/9846465390");
+    final Uri whatsappUri = Uri.parse("https://wa.me/7510530121");
     if (await canLaunchUrl(whatsappUri)) {
       await launchUrl(whatsappUri);
     } else {
@@ -50,6 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
       Search(),
       Cart(),
       Profile(),
+      NaturalDetail()
     ];
   }
 

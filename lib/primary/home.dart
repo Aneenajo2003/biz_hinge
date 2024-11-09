@@ -1,8 +1,13 @@
+import 'package:b2bapp/primary/cart.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+// Assuming CategoryPage1 and CategoryPage2 are already defined, or replace with actual pages
 import '../secondary/categorydetail.dart';
+import '../secondary/healthcare_catdetals.dart';
+import '../secondary/naturalcare_detail.dart';
+import '../secondary/productdetail.dart';
 
 class Home extends StatelessWidget {
   Home({super.key});
@@ -54,13 +59,12 @@ class Home extends StatelessWidget {
       }
     },
   );
-  // Mapping categories to their respective pages
-  final Map<String, Widget Function(BuildContext)> categoryPages = {
-    'Category1': (context) => CategoryPage1(),
-    'Category2': (context) => CategoryPage2(),
+
+  final Map<String, WidgetBuilder> categoryPages = {
+    'Health care': (context) => HealthDetail(),
+    'Natural care': (context) => NaturalDetail(),
 
   };
-
 
   @override
   Widget build(BuildContext context) {
@@ -98,13 +102,15 @@ class Home extends StatelessWidget {
         ),
         actions: [
           IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.account_balance_wallet_outlined,
-                  color: Color(0xff005511))),
+            onPressed: () {},
+            icon: Icon(Icons.account_balance_wallet_outlined,
+                color: Color(0xff005511)),
+          ),
           IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.notifications_none_outlined,
-                  color: Color(0xff005511))),
+            onPressed: () {},
+            icon: Icon(Icons.notifications_none_outlined,
+                color: Color(0xff005511)),
+          ),
         ],
       ),
       body: SingleChildScrollView(
@@ -151,86 +157,84 @@ class Home extends StatelessWidget {
                   ),
                 ),
               ),
-            Padding(
-              padding: const EdgeInsets.only(left: 30),
-              child: SizedBox(
-                height: 120,
-                child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: categories.length,
-                  itemBuilder: (context, index) {
-                    return GestureDetector(
-                      onTap: () {
-                        final categoryLabel = categories[index].label;
-                        final pageBuilder = categoryPages[categoryLabel];
+              Padding(
+                padding: const EdgeInsets.only(left: 30),
+                child: SizedBox(
+                  height: 120,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: categories.length,
+                    itemBuilder: (context, index) {
+                      return GestureDetector(
+                        onTap: () {
+                          final categoryLabel = categories[index].label;
+                          final pageBuilder = categoryPages[categoryLabel];
 
-                        if (pageBuilder != null) {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: pageBuilder),
-                          );
-                        } else {
-                          // Handle case where the page is not found, if needed
-                          print("Page not found for category: $categoryLabel");
-                        }
-                      },
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 10),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Container(
-                              width: 80,
-                              height: 80,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(15),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.black12,
-                                    blurRadius: 5,
-                                    offset: Offset(0, 2),
-                                  ),
-                                ],
+                          if (pageBuilder != null) {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: pageBuilder),
+                            );
+                          } else {
+                            // Handle case where the page is not found
+                            print("Page not found for category: $categoryLabel");
+                          }
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Container(
+                                width: 80,
+                                height: 80,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(15),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 5,
+                                      offset: Offset(0, 2),
+                                    ),
+                                  ],
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      width: 30,
+                                      height: 30,
+                                      decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        shape: BoxShape.rectangle,
+                                      ),
+                                      child: Image.asset(
+                                        categories[index].image,
+                                        fit: BoxFit.contain,
+                                      ),
+                                    ),
+                                    const SizedBox(height: 10),
+                                    Text(
+                                      categories[index].label,
+                                      style: GoogleFonts.poppins(
+                                        fontSize: 10,
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Container(
-                                    width: 30,
-                                    height: 30,
-                                    decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      shape: BoxShape.rectangle,
-                                    ),
-                                    child: Image.asset(
-                                      categories[index].image,
-                                      fit: BoxFit.contain,
-                                    ),
-                                  ),
-                                  const SizedBox(height: 10),
-                                  Text(
-                                    categories[index].label,
-                                    style: GoogleFonts.poppins(
-                                      fontSize: 10,
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.black,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
-                      ),
-                    );
-                  },
+                      );
+                    },
+                  ),
                 ),
               ),
-            ),
-
-
-            const SizedBox(height: 10),
+              const SizedBox(height: 10),
               Padding(
                 padding: const EdgeInsets.only(left: 20),
                 child: Align(
@@ -247,7 +251,7 @@ class Home extends StatelessWidget {
               ),
               const SizedBox(height: 15),
               Padding(
-                padding: const EdgeInsets.only(left: 30,right: 30),
+                padding: const EdgeInsets.only(left: 30, right: 30),
                 child: SizedBox(
                   width: MediaQuery.of(context).size.width * 0.88,
                   height: 350,
@@ -333,13 +337,18 @@ class Home extends StatelessWidget {
                           Positioned(
                             top: 92,
                             left: 8,
-                            child: IconButton(
-
-                              icon: Icon(Icons.add, size: 14),
-
-                              onPressed: () {
-                                // Add to cart action
-                              },
+                            child: Container(
+                              color:Colors.white,
+                              height:20,
+                              child: IconButton(
+                                icon: Icon(Icons.add, size: 14),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => Cart()),
+                                  );
+                                },
+                              ),
                             ),
                           ),
                         ],
