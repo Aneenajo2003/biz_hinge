@@ -3,11 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-// Assuming CategoryPage1 and CategoryPage2 are already defined, or replace with actual pages
-import '../secondary/categorydetail.dart';
 import '../secondary/healthcare_catdetals.dart';
 import '../secondary/naturalcare_detail.dart';
-import '../secondary/productdetail.dart';
+
 
 class Home extends StatelessWidget {
   Home({super.key});
