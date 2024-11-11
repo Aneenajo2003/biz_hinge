@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../payment/successoage.dart';
 import '../secondary/healthcare_catdetals.dart';
 import '../secondary/naturalcare_detail.dart';
 
@@ -26,25 +27,25 @@ class Home extends StatelessWidget {
       switch (index) {
         case 0:
           return Product(
-            name: "Bashpika Tulasi",
+            name: "Bashpika\nTulasi",
             price: "₹100",
             image: "assests/image/img_6.png",
           );
         case 1:
           return Product(
-            name: "Bashpika Thulasi (7ml)",
+            name: "Bashpika\nThulasi (7ml)",
             price: "₹120",
             image: "assests/image/img_7.png",
           );
         case 2:
           return Product(
-            name: "Sukh Bodycare Oil",
+            name: "Sukh\nBodycare Oil",
             price: "₹150",
             image: "assests/image/img_8.png",
           );
         case 3:
           return Product(
-            name: "Sukh Bodycare Oil",
+            name: "Sukh\nBodycare Oil",
             price: "₹110",
             image: "assests/image/img_9.png",
           );
@@ -100,7 +101,12 @@ class Home extends StatelessWidget {
         ),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => FadeInAndSlide()),
+              );
+            },
             icon: Icon(Icons.account_balance_wallet_outlined,
                 color: Color(0xff005511)),
           ),
@@ -295,7 +301,7 @@ class Home extends StatelessWidget {
                                         Text(
                                           products[index].name,
                                           style: GoogleFonts.poppins(
-                                            fontSize: 14,
+                                            fontSize: 12,
                                             fontWeight: FontWeight.w400,
                                             color: Colors.black,
                                           ),
@@ -318,8 +324,8 @@ class Home extends StatelessWidget {
                                 Padding(
                                   padding: const EdgeInsets.only(top: 30),
                                   child: Container(
-                                    width: 90,
-                                    height: 120,
+                                    width: 60,
+                                    height: 90,
                                     decoration: BoxDecoration(
                                       image: DecorationImage(
                                         image: AssetImage(products[index].image),
@@ -333,7 +339,7 @@ class Home extends StatelessWidget {
                             ),
                           ),
                           Positioned(
-                            top: 92,
+                            top: 100,
                             left: 8,
                             child: Container(
                               color:Colors.white,
