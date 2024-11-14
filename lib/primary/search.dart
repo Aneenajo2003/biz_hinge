@@ -55,7 +55,9 @@ class _SearchState extends State<Search> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.white,
         leading: IconButton(
           icon: const Icon(
             Icons.arrow_back_sharp,

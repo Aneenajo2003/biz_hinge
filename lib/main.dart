@@ -49,9 +49,9 @@ class _MyHomePageState extends State<MyHomePage> {
     pages = [
       Home(),
       Search(),
-      Cart(),
+      CartPage(),
       Profile(),
-      NaturalDetail()
+
     ];
   }
 
@@ -67,13 +67,13 @@ class _MyHomePageState extends State<MyHomePage> {
           rippleColor: Colors.transparent,
           hoverColor: Colors.transparent,
           haptic: true,
-          tabBorderRadius: 30, // Scaled value
+          tabBorderRadius: 30,
           tabActiveBorder: Border.all(color: Colors.transparent),
           tabBorder: Border.all(color: Colors.transparent),
           tabShadow: [],
           curve: Curves.easeOutExpo,
           duration: Duration(milliseconds: 100),
-          gap: 8, // Use ScreenUtil scaling
+          gap: 8,
           color: Colors.grey[800],
           activeColor: Color(0xff005511),
           iconSize: 24,
@@ -105,25 +105,23 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          FloatingActionButton(
-            elevation: 0,
-            onPressed: _openWhatsApp,
-            backgroundColor: Colors.transparent,
-            child: ClipOval(
-              child: Image.asset(
-                'assests/image/img.png',
-                fit: BoxFit.fill,
-                width: 50.0,
-                height: 50.0,
-              ),
-            ),
-            heroTag: "whatsappBtn",
+      floatingActionButton: (currentIndex == 0 || currentIndex == 1 ||
+          currentIndex == 3)
+          ? FloatingActionButton(
+        elevation: 0,
+        onPressed: _openWhatsApp,
+        backgroundColor: Colors.transparent,
+        child: ClipOval(
+          child: Image.asset(
+            'assests/image/img.png',
+            fit: BoxFit.fill,
+            width: 50.0,
+            height: 50.0,
           ),
-        ],
-      ),
+        ),
+        heroTag: "whatsappBtn",
+      )
+          : null,
     );
   }
 }

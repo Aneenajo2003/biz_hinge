@@ -146,7 +146,7 @@ class _ProductPageState extends State<ProductPage> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Cart()),
+                      MaterialPageRoute(builder: (context) => CartPage()),
                     );
                   },
                   style: ElevatedButton.styleFrom(

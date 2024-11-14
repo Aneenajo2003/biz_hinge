@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../Profileitem/help.dart';
+import '../Profileitem/notification.dart';
 import '../payment/successoage.dart';
 import '../secondary/healthcare_catdetals.dart';
 import '../secondary/naturalcare_detail.dart';
@@ -104,14 +106,19 @@ class Home extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => FadeInAndSlide()),
+                MaterialPageRoute(builder: (context) => HelpCenterPage()),
               );
             },
             icon: Icon(Icons.account_balance_wallet_outlined,
                 color: Color(0xff005511)),
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => NotificationsPage()),
+              );
+            },
             icon: Icon(Icons.notifications_none_outlined,
                 color: Color(0xff005511)),
           ),
@@ -349,7 +356,7 @@ class Home extends StatelessWidget {
                                 onPressed: () {
                                   Navigator.push(
                                     context,
-                                    MaterialPageRoute(builder: (context) => Cart()),
+                                    MaterialPageRoute(builder: (context) => CartPage()),
                                   );
                                 },
                               ),

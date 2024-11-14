@@ -267,7 +267,12 @@ class _OrderConfirmationScreenState extends State<OrderConfirmationScreen>
               height: 27,
               width: 244,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MyHomePage()),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xff6EBC31),
                   shape: RoundedRectangleBorder(
