@@ -8,6 +8,8 @@ import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import 'front/login.dart';
+
 void main() {
   runApp(const MyApp());
 }

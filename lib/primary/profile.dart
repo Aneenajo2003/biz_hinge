@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../main.dart';
 import '../secondary/profile_edit.dart';
 
 
@@ -66,7 +67,10 @@ class Profile extends StatelessWidget {
         backgroundColor: Colors.white,
         leading: IconButton(
           onPressed: () {
-            Navigator.pop(context);
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) =>  MyHomePage()),
+            );
           },
           icon:
           Icon(Icons.arrow_back, size: 24),

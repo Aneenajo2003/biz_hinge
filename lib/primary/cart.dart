@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../cards/cart/cartview.dart';
 import '../cards/cart/cartitem.dart';
+import '../main.dart';
 
 class CartPage extends StatefulWidget {
   @override
@@ -38,7 +39,10 @@ class _CartPageState extends State<CartPage> {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.pop(context);
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) =>  MyHomePage()),
+            );
           },
         ),
         centerTitle: true,

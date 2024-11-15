@@ -171,7 +171,9 @@ class EditProfile extends StatelessWidget {
                 height: 50,
                 width: 200,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xff6EBC31),
                     shape: RoundedRectangleBorder(

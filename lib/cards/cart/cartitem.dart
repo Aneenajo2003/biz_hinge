@@ -21,59 +21,64 @@ class CartItemWidget extends StatelessWidget {
 
     return Padding(
       padding: const EdgeInsets.all(12),
-      child: Row(
+      child: Column(
         children: [
-          // Item Image
-          Container(
-            width: 80,
-            height: 80,
-
-            decoration: BoxDecoration(
-              color: Colors.grey[200],
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: Image.asset("assests/image/img_10.png",fit: BoxFit.fill,),// Placeholder for image
-          ),
-          const SizedBox(width: 16.0),
-          // Item Details
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text(
-                  "Bashpika tulasi",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-                const Text("medicine"),
-                Text("$totalPrice rs"), // Display total price
-              ],
-            ),
-          ),
-          // Quantity Adjuster
           Row(
             children: [
-              IconButton(
-                onPressed: () {
-                  if (quantity > 1) {
-                    onQuantityChanged(quantity - 1); // Decrease quantity
-                  }
-                },
-                icon: const Icon(Icons.remove),
+              // Item Image
+              Container(
+                width: 80,
+                height: 80,
+
+                decoration: BoxDecoration(
+                  color: Colors.grey[200],
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Image.asset("assests/image/img_10.png",fit: BoxFit.fill,),// Placeholder for image
               ),
-              Text("$quantity"), // Quantity value
+              const SizedBox(width: 16.0),
+              // Item Details
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      "Bashpika tulasi",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    const Text("medicine"),
+                    Text("$totalPrice rs"), // Display total price
+                  ],
+                ),
+              ),
+              // Quantity Adjuster
+              Row(
+                children: [
+                  IconButton(
+                    onPressed: () {
+                      if (quantity > 1) {
+                        onQuantityChanged(quantity - 1); // Decrease quantity
+                      }
+                    },
+                    icon: const Icon(Icons.remove),
+                  ),
+                  Text("$quantity"), // Quantity value
+                  IconButton(
+                    onPressed: () {
+                      onQuantityChanged(quantity + 1); // Increase quantity
+                    },
+                    icon: const Icon(Icons.add),
+                  ),
+                ],
+              ),
+              // Remove Button
               IconButton(
-                onPressed: () {
-                  onQuantityChanged(quantity + 1); // Increase quantity
-                },
-                icon: const Icon(Icons.add),
+                onPressed: onRemove,
+                icon: const Icon(Icons.close),
               ),
             ],
           ),
-          // Remove Button
-          IconButton(
-            onPressed: onRemove,
-            icon: const Icon(Icons.close),
-          ),
+
         ],
       ),
     );
