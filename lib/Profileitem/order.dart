@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../common/app_colors.dart';
+
 class OrderDetailScreen extends StatelessWidget {
   final List<OrderItem> items = [
     OrderItem(
@@ -7,14 +9,14 @@ class OrderDetailScreen extends StatelessWidget {
       quantity: 2,
       price: 29.99,
       status: 'Shipped',
-      deliveryDate: 'Expected on Oct 10, 2024',
+      deliveryDate: 'Expected on Dec 10, 2024',
     ),
     OrderItem(
       productName: 'Product 2',
       quantity: 1,
       price: 59.99,
       status: 'Processing',
-      deliveryDate: 'Expected on Oct 12, 2024',
+      deliveryDate: 'Expected on Dec 12, 2024',
     ),
   ];
 
@@ -49,7 +51,7 @@ class OrderDetailScreen extends StatelessWidget {
                       children: [
                         Icon(
                           Icons.shopping_bag,
-                          color: Color(0xff005511),
+                          color: Darktheme1,
                           size: 30,
                         ),
                         SizedBox(width: 16),
@@ -98,8 +100,8 @@ class OrderDetailScreen extends StatelessWidget {
                             item.status,
                             style: TextStyle(
                               color: item.status == 'Shipped'
-                                  ? Colors.green
-                                  : Colors.orange,
+                                  ?maintheme1
+                                  : orange,
                               fontWeight: FontWeight.w600,
                             ),
                           ),

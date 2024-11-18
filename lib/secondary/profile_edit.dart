@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../common/app_colors.dart';
+
 class EditProfile extends StatelessWidget {
   const EditProfile({super.key});
 
@@ -19,7 +21,7 @@ class EditProfile extends StatelessWidget {
                     height: 350,
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: Color(0xff005511),
+                      color:Darktheme1,
                       borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(30.0),
                         bottomRight: Radius.circular(30.0),
@@ -42,7 +44,7 @@ class EditProfile extends StatelessWidget {
                             ),
                             child: IconButton(onPressed: (){}, icon: Icon(
                               Icons.camera_alt,
-                              color: Color(0xff005511),
+                              color:Darktheme1,
                             ),)
                         ),
                       ),
@@ -71,7 +73,7 @@ class EditProfile extends StatelessWidget {
                     "Name",
                     style: GoogleFonts.poppins(
                         fontSize: 14,
-                        color: Color(0xff005511),
+                        color: Darktheme1,
                         fontWeight: FontWeight.w500),
                   ),
                   Container(
@@ -95,7 +97,7 @@ class EditProfile extends StatelessWidget {
                     "Contact number",
                     style: GoogleFonts.poppins(
                         fontSize: 14,
-                        color: Color(0xff005511),
+                        color: Darktheme1,
                         fontWeight: FontWeight.w500),
                   ),
                   SizedBox(
@@ -120,7 +122,7 @@ class EditProfile extends StatelessWidget {
                     "Shop Name",
                     style: GoogleFonts.poppins(
                         fontSize: 14,
-                        color: Color(0xff005511),
+                        color: Darktheme1,
                         fontWeight: FontWeight.w500),
                   ),
                   SizedBox(
@@ -144,7 +146,7 @@ class EditProfile extends StatelessWidget {
                     "Location",
                     style: GoogleFonts.montserrat(
                         fontSize: 14,
-                        color: Color(0xff005511),
+                        color: Darktheme1,
                         fontWeight: FontWeight.w500),
                   ),
                   SizedBox(
@@ -175,7 +177,7 @@ class EditProfile extends StatelessWidget {
                     Navigator.pop(context);
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xff6EBC31),
+                    backgroundColor: maintheme1,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(
                           8.0), // Responsive border radius

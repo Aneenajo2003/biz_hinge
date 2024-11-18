@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:uuid/uuid.dart';
 
-import '../main.dart'; // Import Google Fonts
+import '../common/app_colors.dart';
+import '../main.dart';
+import 'invoice.dart'; // Import Google Fonts
 
 class User {
   final String shippingName;
@@ -133,7 +135,7 @@ class _OrderConfirmationScreenState extends State<OrderConfirmationScreen>
                   height: 41,
                   width: 44,
                   decoration: BoxDecoration(
-                    color: Color(0xff6EBC31),
+                    color: maintheme1,
                     border: Border.all(
                       color: Colors.transparent, // Border color
                       width: 1, // Border width
@@ -244,12 +246,17 @@ class _OrderConfirmationScreenState extends State<OrderConfirmationScreen>
               height: 27,
               width: 244,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Invoicepage()),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xff6EBC31).withOpacity(0.50),
+                  backgroundColor: lighttheme50,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(
-                        15), // Responsive border radius
+                        15),
                   ),
                 ),
                 child: Text(
@@ -257,7 +264,7 @@ class _OrderConfirmationScreenState extends State<OrderConfirmationScreen>
                   style: GoogleFonts.poppins(
                     fontSize: 12,
                     fontWeight: FontWeight.w500,
-                    color: Color(0xff005511),
+                    color: Darktheme1,
                   ),
                 ),
               ),
@@ -274,7 +281,7 @@ class _OrderConfirmationScreenState extends State<OrderConfirmationScreen>
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xff6EBC31),
+                  backgroundColor: maintheme1,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(
                         15), // Responsive border radius

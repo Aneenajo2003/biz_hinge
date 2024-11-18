@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../common/app_colors.dart';
 import '../../payment/successpage.dart';
 import 'changeadd.dart';
 
@@ -45,9 +46,9 @@ class _CartviewState extends State<Cartview> {
              width: double.infinity,
             margin: const EdgeInsets.only(top: 20.0),
             decoration: BoxDecoration(
-              color: Color(0xff6EBC31).withOpacity(0.84),
+              color: lighttheme84,
               borderRadius: BorderRadius.circular(16.0),
-              border: Border.all(color: const Color(0xFF6EBC31), width: 1),
+              border: Border.all(color: maintheme1, width: 1),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -73,7 +74,7 @@ class _CartviewState extends State<Cartview> {
                             style: GoogleFonts.poppins(
                               fontSize: 12,
                               fontWeight: FontWeight.w500,
-                              color: Color(0xff005511),
+                              color: Darktheme1,
                             ),
                           ),
                         ),
@@ -148,7 +149,7 @@ class _CartviewState extends State<Cartview> {
                                 ),
                               ),
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: Color(0xff6EBC31),
+                                backgroundColor: maintheme1,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15.0),
                                 ),

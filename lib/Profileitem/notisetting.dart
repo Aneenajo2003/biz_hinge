@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_ringtone_player/flutter_ringtone_player.dart';
-import 'package:google_fonts/google_fonts.dart'; // Import Google Fonts
+import 'package:google_fonts/google_fonts.dart';
+
+import '../common/app_colors.dart'; // Import Google Fonts
 
 void main() => runApp(MyApp());
 
@@ -141,7 +143,7 @@ class _NotificationSettingsScreenState
             title: Text('Select a Ringtone', style: GoogleFonts.poppins(
                 fontSize: 18,
                 fontWeight: FontWeight.w500,
-                color: Colors.lightGreen)),
+                color: maintheme1)),
             content: Column(
               mainAxisSize: MainAxisSize.min,
               children: ringtones.map((ringtone) {
@@ -263,14 +265,14 @@ class _NotificationSettingsScreenState
       ),
       value: isMuted,
 
-      activeColor: Color(0xff005511),
+      activeColor: Darktheme1,
       // Green color for active (on) state
       inactiveTrackColor: Colors.transparent,
       onChanged: (val) {
         _onToggleChanged(val, 'isMuted');
       },
       secondary: Icon(isMuted ? Icons.notifications_off : Icons.notifications,
-          color: Color(0xff005511)),
+          color: Darktheme1),
     );
   }
 
@@ -292,7 +294,7 @@ class _NotificationSettingsScreenState
               fontSize: 16, fontWeight: FontWeight.w500, color: Colors.black),
         ),
         onTap: _showRingtonePicker,
-        trailing: Icon(Icons.music_note,color: Color(0xff005511),),
+        trailing: Icon(Icons.music_note,color: Darktheme1,),
       ),
     );
   }
@@ -320,13 +322,13 @@ class _NotificationSettingsScreenState
       ),
       value: currentValue,
       onChanged: !isMuted ? onChanged : null,
-      activeColor: Color(0xff005511),
+      activeColor: Darktheme1,
       // Green color for active (on) state
       inactiveTrackColor: Colors.transparent,
       // Grey color for inactive (off) state
       secondary: Icon(
         Icons.notifications,
-        color: !isMuted ?Color(0xff005511): Colors.grey,
+        color: !isMuted ?Darktheme1: Colors.grey,
       ),
     );
   }

@@ -34,7 +34,7 @@ class _CartPageState extends State<CartPage> {
           "My Cart",
           style: GoogleFonts.poppins(
             fontWeight: FontWeight.w500,
-          ),
+        ),
         ),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),

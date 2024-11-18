@@ -1,19 +1,22 @@
 import 'package:b2bapp/primary/cart.dart';
+import 'package:b2bapp/primary/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import '../Profileitem/notification.dart';
-
-import '../Profileitem/order.dart';
-import '../cards/delete_acc/delete_account.dart';
-
+import '../common/app_colors.dart';
 import '../secondary/healthcare_catdetals.dart';
 import '../secondary/naturalcare_detail.dart';
-
+import 'leafcoin.dart';
 
 class Home extends StatelessWidget {
   Home({super.key});
+
+  Future<String> fetchUserName() async {
+    // Simulate an API call
+    await Future.delayed(Duration(seconds: 2));
+    return "Shopname";
+  }
 
   final List<String> banners = [
     "assests/image/img_5.png",
@@ -66,7 +69,6 @@ class Home extends StatelessWidget {
   final Map<String, WidgetBuilder> categoryPages = {
     'Health care': (context) => HealthDetail(),
     'Natural care': (context) => NaturalDetail(),
-
   };
 
   @override
@@ -77,42 +79,81 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.white,
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: CircleAvatar(
-            backgroundImage: AssetImage("assests/image/img_2.png"),
-            radius: 25,
+          child: GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Profile()),
+              );
+            },
+            child: CircleAvatar(
+              backgroundImage: AssetImage("assests/image/img_2.png"),
+              radius: 25,
+            ),
           ),
         ),
-        title: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "Hello, Shopname",
-              style: GoogleFonts.kaushanScript(
-                fontSize: 18,
-                fontWeight: FontWeight.w500,
-                color: Colors.lightGreen,
-              ),
-            ),
-            Text(
-              "Welcome",
-              style: GoogleFonts.paprika(
-                fontSize: 13,
-                fontWeight: FontWeight.w400,
-                color: Colors.black,
-              ),
-            ),
-          ],
+        title: FutureBuilder<String>(
+          future: fetchUserName(),
+          builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return Text(
+                ".....",
+                style: GoogleFonts.kaushanScript(
+                  fontSize: 25,
+                  color: Colors.green,
+                  fontWeight: FontWeight.bold,
+                ),
+              );
+            } else if (snapshot.hasError) {
+              return Text(
+                "!!!!!!",
+                style: GoogleFonts.oldStandardTt(
+                  fontSize: 25,
+                  color: Colors.red,
+                  fontWeight: FontWeight.bold,
+                ),
+              );
+            } else {
+              final userName = snapshot.data ?? "Guest";
+              return Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Hi $userName",
+                    style: GoogleFonts.kaushanScript(
+                      fontSize: 20,
+                      color: Colors.green,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  Text(
+                    "Welcome",
+                    style: GoogleFonts.paprika(
+                      fontSize: 13,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.black,
+                    ),
+                  ),
+
+                ],
+              );
+            }
+          },
         ),
         actions: [
           IconButton(
+
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => OrderDetailScreen()),
+                MaterialPageRoute(builder: (context) => SuperCoinStatement()),
               );
             },
-            icon: Icon(Icons.account_balance_wallet_outlined,
-                color: Color(0xff005511)),
+            icon: Badge(
+              backgroundColor:  Darktheme1,
+
+            child: Icon(Icons.account_balance_wallet_outlined,
+                color: Darktheme1),)
           ),
           IconButton(
             onPressed: () {
@@ -121,8 +162,10 @@ class Home extends StatelessWidget {
                 MaterialPageRoute(builder: (context) => NotificationsPage()),
               );
             },
-            icon: Icon(Icons.notifications_none_outlined,
-                color: Color(0xff005511)),
+            icon: Badge(
+              backgroundColor:  Darktheme1,
+            child: Icon(Icons.notifications_none_outlined,
+                color: Darktheme1),)
           ),
         ],
       ),
@@ -137,7 +180,7 @@ class Home extends StatelessWidget {
                 itemBuilder: (context, index, _) {
                   return Container(
                     margin: const EdgeInsets.symmetric(horizontal: 5),
-                    width: 380,
+                    width: double.infinity,
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         image: AssetImage(banners[index]),
@@ -155,6 +198,7 @@ class Home extends StatelessWidget {
                   enlargeCenterPage: true,
                 ),
               ),
+              const SizedBox(height: 15),
               const SizedBox(height: 15),
               Padding(
                 padding: const EdgeInsets.only(left: 30),
@@ -269,7 +313,7 @@ class Home extends StatelessWidget {
                   width: MediaQuery.of(context).size.width * 0.88,
                   height: 350,
                   child: GridView.builder(
-                    
+
                     physics: NeverScrollableScrollPhysics(),
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
@@ -283,7 +327,7 @@ class Home extends StatelessWidget {
                       return Stack(
                         children: [
                           Card(
-                      elevation:2,
+                            elevation:2,
                             child: Container(
                               padding: const EdgeInsets.all(12),
                               decoration: BoxDecoration(
@@ -373,7 +417,7 @@ class Home extends StatelessWidget {
                     },
                   ),
                 ),
-              ),
+              ),// Rest of your body content
             ],
           ),
         ),

@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:file_picker/file_picker.dart';
 
+import '../common/app_colors.dart';
 import '../main.dart';
 
 class KycVerificationPage extends StatefulWidget {
@@ -141,7 +142,7 @@ class _KycVerificationPageState extends State<KycVerificationPage> {
                       isAgreed = value!;
                     });
                   },
-                  activeColor: Colors.green,
+                  activeColor:maintheme1,
                 ),
                 Expanded(
                   child: Text(
@@ -170,7 +171,7 @@ class _KycVerificationPageState extends State<KycVerificationPage> {
                         );
                       },
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xff6EBC31).withOpacity(0.50),
+                        backgroundColor:lighttheme50,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),
@@ -180,7 +181,7 @@ class _KycVerificationPageState extends State<KycVerificationPage> {
                         style:TextStyle(fontFamily: 'Poppins',
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
-                          color: Color(0xff005511),
+                          color: Darktheme1,
                         ),
                       ),
                     ),
@@ -198,7 +199,7 @@ class _KycVerificationPageState extends State<KycVerificationPage> {
                       }
                           : null,
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xff6EBC31),
+                        backgroundColor:maintheme1,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),

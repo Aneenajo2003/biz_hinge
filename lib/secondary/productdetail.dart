@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../common/app_colors.dart';
 import '../primary/cart.dart';
 import '../primary/home.dart';
 
@@ -52,7 +53,9 @@ class _ProductPageState extends State<ProductPage> {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(
+          backgroundColor: Colors.white,
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () {
@@ -100,8 +103,8 @@ class _ProductPageState extends State<ProductPage> {
                                 width: 0.1,
                               ),
                               color: selectedVolume == volume
-                                  ? Color(0xff6EBC31)
-                                  : Color(0xff6EBC31).withOpacity(0.39),
+                                  ? maintheme1
+                                  : lighttheme39,
                               borderRadius: BorderRadius.circular(10),
                             ),
                             child: Text(
@@ -150,7 +153,7 @@ class _ProductPageState extends State<ProductPage> {
                     );
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xff6EBC31).withOpacity(0.79),
+                    backgroundColor: lighttheme79,
                   ),
                   child: Text(
                     'Add to cart',

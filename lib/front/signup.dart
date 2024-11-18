@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../common/app_colors.dart';
 import '../primary/profile.dart';
 import 'kyc_verification.dart';
 import 'login.dart';
@@ -254,11 +255,11 @@ class _HomeState extends State<Signup> {
                                         shape: BoxShape.circle,
                                         border: Border.all(
                                           color:
-                                          isChecked ?  Color(0xff6EBC31) :  Color(0xff6EBC31),
+                                          isChecked ? maintheme1 :  maintheme1,
                                           width: 2,
                                         ),
                                         color: isChecked
-                                            ?  Color(0xff6EBC31)
+                                            ?  maintheme1
                                             : Colors.transparent,
                                       ),
                                       child: isChecked
@@ -328,7 +329,7 @@ class _HomeState extends State<Signup> {
                         ),
                         style: ElevatedButton.styleFrom(
                             elevation: 6,
-                            backgroundColor: Color(0xff6EBC31),
+                            backgroundColor: maintheme1,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(15.0),
                             )),
@@ -344,7 +345,7 @@ class _HomeState extends State<Signup> {
                             style: GoogleFonts.poppins(
                               fontSize: 12,
                               fontWeight: FontWeight.w400,
-                              color: Color(0xff6EBC31),
+                              color:maintheme1,
                             ),
                           ),
                           Expanded(
@@ -354,7 +355,7 @@ class _HomeState extends State<Signup> {
                                 style: GoogleFonts.poppins(
                                   fontSize: 12,
                                   fontWeight: FontWeight.w400,
-                                  color: Color(0xff6EBC31),
+                                  color: maintheme1,
                                 ),
                               ),
                               onTap: (){

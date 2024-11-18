@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../common/app_colors.dart';
+
 class HelpCenterPage extends StatelessWidget {
   Future<void> _launchURL(String url) async {
     if (await canLaunch(url)) {
@@ -52,7 +54,7 @@ class HelpCenterPage extends StatelessWidget {
       decoration: BoxDecoration(
         // color: Colors.red,
         gradient: LinearGradient(
-          colors: [Color(0xff6EBC31).withOpacity(0.84), Color(0xff6EBC31)],
+          colors: [lighttheme84, maintheme1],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
@@ -95,7 +97,7 @@ class HelpCenterPage extends StatelessWidget {
           style: GoogleFonts.poppins(
             fontSize: 18,
             fontWeight: FontWeight.w600,
-            color: Color(0xff6EBC31).withOpacity(0.84),
+            color: lighttheme84,
           ),
         ),
         SizedBox(height: 24),
@@ -134,7 +136,7 @@ class HelpCenterPage extends StatelessWidget {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       elevation: 3,
       child: ListTile(
-        leading: Icon(icon, color: Color(0xff6EBC31).withOpacity(0.84)),
+        leading: Icon(icon, color: lighttheme84),
         title: Text(
           title,
           style: GoogleFonts.poppins(fontSize: 16),

@@ -8,6 +8,7 @@ import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import 'common/app_colors.dart';
 import 'front/login.dart';
 
 void main() {
@@ -77,9 +78,9 @@ class _MyHomePageState extends State<MyHomePage> {
           duration: Duration(milliseconds: 100),
           gap: 8,
           color: Colors.grey[800],
-          activeColor: Color(0xff005511),
+          activeColor: Darktheme1,
           iconSize: 24,
-          tabBackgroundColor: Color(0xff6EBC31).withOpacity(0.42),
+          tabBackgroundColor: lighttheme42,
           padding: EdgeInsets.symmetric(horizontal: 6, vertical: 5),
           selectedIndex: currentIndex,
           onTabChange: (index) {

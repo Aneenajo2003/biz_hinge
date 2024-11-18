@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../common/app_colors.dart';
+
 class NotificationsPage extends StatelessWidget {
   final List<Map<String, dynamic>> notifications = [
     // {
@@ -42,14 +44,14 @@ class NotificationsPage extends StatelessWidget {
   'description': 'Your order #12345 has been shipped and is on its way.',
   'time': 'Just now',
   'icon': Icons.local_shipping,
-  'color': Color(0xff4CAF50),
+  'color': maintheme1,
   },
   {
   'title': 'Order Delivered',
   'description': 'Your order #12344 has been delivered successfully.',
   'time': 'Yesterday',
   'icon': Icons.check_circle,
-  'color': Color(0xff4CAF50),
+  'color': maintheme1,
   },
   ]
 },
@@ -82,7 +84,7 @@ class NotificationsPage extends StatelessWidget {
           'Notifications',
           style: GoogleFonts.poppins(fontSize: 24, fontWeight: FontWeight.bold),
         ),
-        backgroundColor: Color(0xff6EBC31),
+        backgroundColor:maintheme1,
         elevation: 2,
       ),
       body: ListView.builder(
@@ -110,7 +112,7 @@ class NotificationsPage extends StatelessWidget {
                     child: Row(
                       children: [
                         CircleAvatar(
-                          backgroundColor: Color(0xff6EBC31).withOpacity(0.9),
+                          backgroundColor: lighttheme09,
                           child: Icon(notification['icon'], color: Colors.white),
                         ),
                         SizedBox(width: 16),

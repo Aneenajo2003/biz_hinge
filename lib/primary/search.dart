@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
+import '../common/app_colors.dart';
 import '../main.dart';
 import '../secondary/healthcare_catdetals.dart';
 import '../secondary/naturalcare_detail.dart';
@@ -59,9 +60,9 @@ class _SearchState extends State<Search> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         leading: IconButton(
-          icon: const Icon(
+          icon: Icon(
             Icons.arrow_back_sharp,
-            color: Color(0xff005511),
+            color:Darktheme1,
           ),
           onPressed: () {
             Navigator.push(
@@ -71,15 +72,11 @@ class _SearchState extends State<Search> {
           },
         ),
         centerTitle: true,
-        title: const Text(
+        title: Text(
           "Search",
-          style: TextStyle(
-            color: Color(0xff2C2D2E),
-            fontWeight: FontWeight.bold,
-            fontFamily: "Sen",
-            fontSize: 20,
-            letterSpacing: 2,
-          ),
+          style: GoogleFonts.poppins(
+          fontWeight: FontWeight.w500,
+        ),
         ),
       ),
       body: SingleChildScrollView(
@@ -101,7 +98,7 @@ class _SearchState extends State<Search> {
                     decoration: InputDecoration(
                       prefixIcon: const Icon(
                         Icons.search,
-                        color: Color(0xff005511),
+                        color: Darktheme1,
                       ),
                       suffixIcon: IconButton(
                         onPressed: () {
@@ -112,7 +109,7 @@ class _SearchState extends State<Search> {
                         },
                         icon: const Icon(
                           Icons.highlight_remove_rounded,
-                          color: Color(0xff005511),
+                          color: Darktheme1,
                         ),
                       ),
                       hintText: 'Search',

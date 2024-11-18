@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../common/app_colors.dart';
+
 class ChangeAddress extends StatefulWidget {
   const ChangeAddress({super.key});
 
@@ -306,7 +308,7 @@ class _ChangeAddressState extends State<ChangeAddress> {
                                   ),
                                   style: ElevatedButton.styleFrom(
                                     backgroundColor: isHomeSelected
-                                        ? const Color(0xff6EBC31)
+                                        ? maintheme1
                                         : Colors.white,
                                     padding: EdgeInsets.symmetric(
                                         vertical: 1,
@@ -343,7 +345,7 @@ class _ChangeAddressState extends State<ChangeAddress> {
                                   ),
                                   style: ElevatedButton.styleFrom(
                                     backgroundColor: isOfficeSelected
-                                        ?  Color(0xff6EBC31)
+                                        ? maintheme1
                                         : Colors.white,
                                     padding: EdgeInsets.symmetric(
                                         vertical: 1, horizontal: 1),
@@ -370,7 +372,7 @@ class _ChangeAddressState extends State<ChangeAddress> {
                               color: Colors.white
                           ),),
                           style: ElevatedButton.styleFrom(
-                              backgroundColor: Color(0xff005511),
+                              backgroundColor: Darktheme1,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15.0),
                               )),
