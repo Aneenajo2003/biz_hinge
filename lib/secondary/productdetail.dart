@@ -53,9 +53,9 @@ class _ProductPageState extends State<ProductPage> {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor:white,
         appBar: AppBar(
-          backgroundColor: Colors.white,
+          backgroundColor: white,
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () {
@@ -73,7 +73,7 @@ class _ProductPageState extends State<ProductPage> {
                 style: GoogleFonts.poppins(
                   fontSize: 18,
                   fontWeight: FontWeight.w400,
-                  color: Colors.black,
+                  color:black,
                 ),
               ),
               SizedBox(height: 10),
@@ -99,7 +99,7 @@ class _ProductPageState extends State<ProductPage> {
                             padding: EdgeInsets.symmetric(horizontal: 4, vertical: 4), // Smaller padding
                             decoration: BoxDecoration(
                               border: Border.all(
-                                color: Colors.black,
+                                color:black,
                                 width: 0.1,
                               ),
                               color: selectedVolume == volume
@@ -112,7 +112,7 @@ class _ProductPageState extends State<ProductPage> {
                               style: GoogleFonts.poppins(
                                 fontSize: 12, // Smaller font size
                                 fontWeight: FontWeight.w400,
-                                color: selectedVolume == volume ? Colors.white : Colors.black,
+                                color: selectedVolume == volume ?white : black,
                               ),
                             ),
                           ),
@@ -128,7 +128,7 @@ class _ProductPageState extends State<ProductPage> {
                       style: GoogleFonts.poppins(
                         fontSize: 20,
                         fontWeight: FontWeight.w600,
-                        color: Colors.black,
+                        color:black,
                       ),
                     ),
                   ),
@@ -140,7 +140,7 @@ class _ProductPageState extends State<ProductPage> {
                 style: GoogleFonts.poppins(
                   fontSize: 16,
                   fontWeight: FontWeight.w400,
-                  color: Colors.black,
+                  color: black,
                 ),
               ),
               Spacer(),
@@ -160,7 +160,7 @@ class _ProductPageState extends State<ProductPage> {
                     style: GoogleFonts.poppins(
                       fontSize: 14,
                       fontWeight: FontWeight.w500,
-                      color: Colors.white,
+                      color:white,
                     ),
                   ),
                 ),

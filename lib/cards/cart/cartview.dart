@@ -55,7 +55,7 @@ class _CartviewState extends State<Cartview> {
               children: [
                 Container(
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color:white,
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(16.0),
                       topRight: Radius.circular(16.0),
@@ -66,7 +66,7 @@ class _CartviewState extends State<Cartview> {
                     child: Row(
                       children: [
                         InkWell(onTap:() {},
-                            child: Icon(Icons.account_balance_wallet_outlined, size: 20, color: Colors.black)),
+                            child: Icon(Icons.account_balance_wallet_outlined, size: 20, color: black)),
                         const SizedBox(width: 8),
                         Expanded(
                           child: Text(
@@ -145,7 +145,7 @@ class _CartviewState extends State<Cartview> {
                                 style: GoogleFonts.poppins(
                                   fontSize: 12,
                                   fontWeight: FontWeight.w500,
-                                  color: Colors.white,
+                                  color: white,
                                 ),
                               ),
                               style: ElevatedButton.styleFrom(

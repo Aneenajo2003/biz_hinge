@@ -25,25 +25,25 @@ class SuperCoinStatement extends StatelessWidget {
         "title": "Expire Coins",
         "subtitle": "Debited on 03 Jul 2024",
         "amount": "-10",
-        "amountColor": Colors.red,
+        "amountColor": red,
       },
       {
         "title": "Expire Coins",
         "subtitle": "Debited on 02 Jun 2024",
         "amount": "-04",
-        "amountColor": Colors.red,
+        "amountColor":red,
       },
       {
         "title": "Carmesi Sweet Summer Natural UnderArms Deodorant",
         "subtitle": "Credited on 20 May 2024 | ${getExpirationText(DateTime(2024, 6, 30))}",
         "amount": "+02",
-        "amountColor": Colors.green,
+        "amountColor": maintheme1,
       },
       {
         "title": "KOTTY Regular Women Light Blue Jeans",
         "subtitle": "Credited on 18 Dec 2023 | ${getExpirationText(DateTime(2024, 6, 30))}",
         "amount": "+08",
-        "amountColor": Colors.green,
+        "amountColor": maintheme1,
       },
     ];
 
@@ -55,7 +55,7 @@ class SuperCoinStatement extends StatelessWidget {
           style: GoogleFonts.poppins(
             fontSize: 18,
             fontWeight: FontWeight.w600,
-            color: Colors.white,
+            color:white,
           ),
         ),
         centerTitle: true,
@@ -63,7 +63,7 @@ class SuperCoinStatement extends StatelessWidget {
           onPressed: () {
             Navigator.pop(context);
           },
-          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          icon: Icon(Icons.arrow_back, color:white),
         ),
         elevation: 0,
       ),
@@ -86,7 +86,7 @@ class SuperCoinStatement extends StatelessWidget {
                         style: GoogleFonts.poppins(
                           fontSize: 40,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white,
+                          color:white,
                         ),
                       ),
                     ],
@@ -97,7 +97,7 @@ class SuperCoinStatement extends StatelessWidget {
                     style: GoogleFonts.poppins(
                       fontSize: 14,
                       fontWeight: FontWeight.w500,
-                      color: Colors.white,
+                      color:white,
                     ),
                   ),
                   const SizedBox(height: 16),
@@ -110,15 +110,15 @@ class SuperCoinStatement extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Icon(Icons.warning_rounded,
-                            color: Colors.red, size: 18),
+                         Icon(Icons.warning_rounded,
+                            color:red, size: 18),
                         const SizedBox(width: 8),
                         Text(
                           "2 leaf coins due to expire in 17 days",
                           style: GoogleFonts.poppins(
                             fontSize: 14,
                             fontWeight: FontWeight.w500,
-                            color: Colors.red,
+                            color:red,
                           ),
                         ),
                       ],
@@ -145,7 +145,7 @@ class SuperCoinStatement extends StatelessWidget {
                     style: GoogleFonts.poppins(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                      color:white,
                     ),
                   ),
                 ),

@@ -8,7 +8,7 @@ class Invoicepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor:white,
       appBar: AppBar(
 
         leading: IconButton(
@@ -20,7 +20,7 @@ class Invoicepage extends StatelessWidget {
             fontWeight: FontWeight.w500,
           ),),
         centerTitle: true,
-        backgroundColor: Colors.white,
+        backgroundColor:white,
         elevation: 0,
       ),
       body: Padding(
@@ -56,7 +56,7 @@ class Invoicepage extends StatelessWidget {
         width: double.infinity, // Adjust width as needed
         padding: EdgeInsets.all(10),
         decoration: BoxDecoration(
-          color: Colors.white,
+          color:white,
           borderRadius: BorderRadius.circular(10),
           boxShadow: [
             BoxShadow(
@@ -78,7 +78,7 @@ class Invoicepage extends StatelessWidget {
                   'Order summary',
                   style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                 ),
-                Icon(Icons.expand_more, color: Colors.black),
+                Icon(Icons.expand_more, color:black),
               ],
             ),
             SizedBox(height: 10),
@@ -91,7 +91,7 @@ class Invoicepage extends StatelessWidget {
                     color: maintheme1,
                     borderRadius: BorderRadius.circular(8),
                   ),
-                  child: Icon(Icons.local_shipping, color: Colors.white),
+                  child: Icon(Icons.local_shipping, color:white),
                 ),
                 SizedBox(width: 10),
                 Column(
@@ -102,12 +102,12 @@ class Invoicepage extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.bold,
-                        color: Colors.black,
+                        color:black,
                       ),
                     ),
                     Text(
                       'estimated in 2-3 days',
-                      style: TextStyle(fontSize: 11, color: Colors.grey),
+                      style: TextStyle(fontSize: 11, color:grey),
                     ),
                   ],
                 ),
@@ -136,7 +136,7 @@ class Invoicepage extends StatelessWidget {
             Container(
               padding: EdgeInsets.all(10),
               decoration: BoxDecoration(
-                border: Border.all(color: Colors.grey[300]!),
+                border: Border.all(color:grey),
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Row(
@@ -148,7 +148,7 @@ class Invoicepage extends StatelessWidget {
                     children: [
                       Text(
                         'Shipping name',
-                        style: TextStyle(fontSize: 10, color: Colors.grey),
+                        style: TextStyle(fontSize: 10, color:grey),
                       ),
                       SizedBox(height: 5),
                       Text(
@@ -159,20 +159,20 @@ class Invoicepage extends StatelessWidget {
                       SizedBox(height: 5),
                       Text(
                         'From',
-                        style: TextStyle(fontSize: 12, color: Colors.grey),
+                        style: TextStyle(fontSize: 12, color:grey),
                       ),
                       Text(
                         'Leafbazar Enterprises Pvt.Ltd \nPuthanangadi ROAD, \nMEKKAD P.O',
-                        style: TextStyle(fontSize: 11, color: Colors.black),
+                        style: TextStyle(fontSize: 11, color:black),
                       ),
                       SizedBox(height: 5),
                       Text(
                         'Quantity',
-                        style: TextStyle(fontSize: 12, color: Colors.grey),
+                        style: TextStyle(fontSize: 12, color:grey),
                       ),
                       Text(
                         '12+1 (Free)',
-                        style: TextStyle(fontSize: 12, color: Colors.black),
+                        style: TextStyle(fontSize: 12, color:black),
                       ),
                     ],
                   ),
@@ -183,7 +183,7 @@ class Invoicepage extends StatelessWidget {
                     children: [
                       Text(
                         'Recipient name',
-                        style: TextStyle(fontSize: 10, color: Colors.grey),
+                        style: TextStyle(fontSize: 10, color:grey),
                       ),
                       SizedBox(height: 5),
                       Text(
@@ -194,20 +194,20 @@ class Invoicepage extends StatelessWidget {
                       SizedBox(height: 5),
                       Text(
                         'To',
-                        style: TextStyle(fontSize: 12, color: Colors.grey),
+                        style: TextStyle(fontSize: 12, color:grey),
                       ),
                       Text(
                         'Sadhujana Sangam \nBuilding,Alangad P.O,\nAluva',
-                        style: TextStyle(fontSize: 12, color: Colors.black),
+                        style: TextStyle(fontSize: 12, color: black),
                       ),
                       SizedBox(height: 5),
                       Text(
                         'Amount',
-                        style: TextStyle(fontSize: 12, color: Colors.grey),
+                        style: TextStyle(fontSize: 12, color:grey),
                       ),
                       Text(
                         '960rs',
-                        style: TextStyle(fontSize: 12, color: Colors.black),
+                        style: TextStyle(fontSize: 12, color:black),
                       ),
                     ],
                   ),

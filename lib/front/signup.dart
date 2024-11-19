@@ -29,7 +29,7 @@ class _HomeState extends State<Signup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: white,
         body: SafeArea(
             child: SingleChildScrollView(
               child: Form(
@@ -54,7 +54,7 @@ class _HomeState extends State<Signup> {
                         style: GoogleFonts.poppins(
                           fontSize: 25,
                           fontWeight: FontWeight.w500,
-                          color: Colors.black,
+                          color:black,
                         ),
                       ),
                     ),
@@ -68,7 +68,7 @@ class _HomeState extends State<Signup> {
                         style: GoogleFonts.poppins(
                           fontSize: 12,
                           fontWeight: FontWeight.w400,
-                          color: Colors.black,
+                          color:black,
                         ),
                       ),
                     ),
@@ -82,7 +82,7 @@ class _HomeState extends State<Signup> {
                         style: GoogleFonts.poppins(
                           fontSize: 12,
                           fontWeight: FontWeight.w400,
-                          color: Colors.black,
+                          color:black,
                         ),
                       ),
                     ),
@@ -91,7 +91,7 @@ class _HomeState extends State<Signup> {
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color:white,
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: TextFormField(
@@ -100,11 +100,11 @@ class _HomeState extends State<Signup> {
                             hintText: 'Shopname',
                             hintStyle: GoogleFonts.montserrat(
                               fontSize: 15,
-                              color: Colors.grey,
+                              color:grey,
                             ),
                             prefixIcon: Icon(Icons.maps_home_work_sharp),
                             border: OutlineInputBorder(
-                              borderSide: BorderSide(color: Colors.black),
+                              borderSide: BorderSide(color:black),
                               borderRadius: BorderRadius.circular(20),
                             ),
                           ),
@@ -126,7 +126,7 @@ class _HomeState extends State<Signup> {
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color:white,
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: TextFormField(
@@ -135,11 +135,11 @@ class _HomeState extends State<Signup> {
                             hintText: 'Ownername',
                             hintStyle:  GoogleFonts.montserrat(
                               fontSize: 15,
-                              color: Colors.grey,
+                              color:grey,
                             ),
                             prefixIcon: Icon(Icons.person),
                             border: OutlineInputBorder(
-                              borderSide: BorderSide(color: Colors.black),
+                              borderSide: BorderSide(color: black),
                               borderRadius: BorderRadius.circular(20),
                             ),
                           ),
@@ -165,7 +165,7 @@ class _HomeState extends State<Signup> {
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color:white,
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: TextFormField(
@@ -174,7 +174,7 @@ class _HomeState extends State<Signup> {
                             hintText: 'Phone',
                             hintStyle:  GoogleFonts.montserrat(
                               fontSize: 15,
-                              color: Colors.grey,
+                              color:grey,
                             ),
                             prefixIcon: Icon(Icons.phone),
                             border: OutlineInputBorder(
@@ -204,7 +204,7 @@ class _HomeState extends State<Signup> {
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color:white,
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: TextFormField(
@@ -213,11 +213,11 @@ class _HomeState extends State<Signup> {
                             hintText: 'Referral(Optional)',
                             hintStyle:  GoogleFonts.montserrat(
                               fontSize: 15,
-                              color: Colors.grey,
+                              color:grey,
                             ),
                             prefixIcon: Icon(Icons.wallet_giftcard_rounded),
                             border: OutlineInputBorder(
-                              borderSide: BorderSide(color: Colors.black),
+                              borderSide: BorderSide(color:black),
                               borderRadius: BorderRadius.circular(20),
                             ),
                           ),
@@ -265,7 +265,7 @@ class _HomeState extends State<Signup> {
                                       child: isChecked
                                           ? Icon(
                                         Icons.check,
-                                        color: Colors.white,
+                                        color:white,
                                         size: 14,
                                       )
                                           : null,
@@ -278,7 +278,7 @@ class _HomeState extends State<Signup> {
                                       style: GoogleFonts.poppins(
                                         fontSize: 12,
                                         fontWeight: FontWeight.w400,
-                                        color: Colors.black,
+                                        color:black,
                                       ),
                                     ),
                                   ),
@@ -290,7 +290,7 @@ class _HomeState extends State<Signup> {
                                   child: Text(
                                     formFieldState.errorText!,
                                     style: TextStyle(
-                                      color: Colors.red,
+                                      color:red,
                                       fontSize: 12,
                                     ),
                                   ),
@@ -324,7 +324,7 @@ class _HomeState extends State<Signup> {
                           style: GoogleFonts.poppins(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
-                            color: Colors.white,
+                            color:white,
                           ),
                         ),
                         style: ElevatedButton.styleFrom(

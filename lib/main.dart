@@ -5,7 +5,7 @@ import 'package:b2bapp/primary/search.dart';
 import 'package:b2bapp/secondary/naturalcare_detail.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'package:url_launcher/url_launcher.dart';
 
 import 'common/app_colors.dart';
@@ -61,6 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: white,
       body: SafeArea(
         child: pages[currentIndex],
       ),

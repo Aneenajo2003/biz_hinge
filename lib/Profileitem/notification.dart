@@ -113,7 +113,7 @@ class NotificationsPage extends StatelessWidget {
                       children: [
                         CircleAvatar(
                           backgroundColor: lighttheme09,
-                          child: Icon(notification['icon'], color: Colors.white),
+                          child: Icon(notification['icon'], color:white),
                         ),
                         SizedBox(width: 16),
                         Expanded(
@@ -132,7 +132,7 @@ class NotificationsPage extends StatelessWidget {
                               SizedBox(height: 8),
                               Text(
                                 notification['time']!,
-                                style: GoogleFonts.poppins(fontSize: 12, color: Colors.grey),
+                                style: GoogleFonts.poppins(fontSize: 12, color:grey),
                               ),
                             ],
                           ),

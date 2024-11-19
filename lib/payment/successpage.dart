@@ -4,6 +4,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
+import '../common/app_colors.dart';
+
 class FadeInAndSlide extends StatefulWidget {
   const FadeInAndSlide({super.key});
 
@@ -17,7 +19,7 @@ class _FadeInAndSlideState extends State<FadeInAndSlide> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:Colors.white,
+      backgroundColor:white,
       body: Stack(
         alignment: Alignment.center,
         children: [

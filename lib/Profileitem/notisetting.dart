@@ -5,21 +5,6 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../common/app_colors.dart'; // Import Google Fonts
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'E-commerce Notification Settings',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: NotificationSettingsScreen(),
-    );
-  }
-}
-
 class NotificationSettingsScreen extends StatefulWidget {
   @override
   _NotificationSettingsScreenState createState() =>
@@ -150,7 +135,7 @@ class _NotificationSettingsScreenState
                 return ListTile(
                   title: Text(ringtone, style: GoogleFonts.poppins(fontSize: 16,
                       fontWeight: FontWeight.w500,
-                      color: Colors.black)),
+                      color:black)),
                   onTap: () {
                     Navigator.pop(context, ringtone);
                   },
@@ -175,11 +160,11 @@ class _NotificationSettingsScreenState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor:white,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor:white,
         title: Text('Notification Settings', style: GoogleFonts.poppins(
-            fontWeight: FontWeight.w600, color: Colors.black)),
+            fontWeight: FontWeight.w600, color:black)),
       ),
       body: ListView(
         children: [
@@ -261,7 +246,7 @@ class _NotificationSettingsScreenState
       title: Text(
         'Mute Notifications',
         style: GoogleFonts.poppins(
-            fontSize: 18, fontWeight: FontWeight.w500, color: Colors.black),
+            fontSize: 18, fontWeight: FontWeight.w500, color:black),
       ),
       value: isMuted,
 
@@ -284,14 +269,14 @@ class _NotificationSettingsScreenState
           'Set Ringtone',
           style: GoogleFonts.poppins(fontSize: 16,
               fontWeight: FontWeight.w500,
-              color: Colors.black),
+              color:black),
         ),
         subtitle: Text(
           selectedRingtone != null
               ? "Selected ringtone: $selectedRingtone"
               : "No ringtone selected",
           style: GoogleFonts.poppins(
-              fontSize: 16, fontWeight: FontWeight.w500, color: Colors.black),
+              fontSize: 16, fontWeight: FontWeight.w500, color:black),
         ),
         onTap: _showRingtonePicker,
         trailing: Icon(Icons.music_note,color: Darktheme1,),
@@ -305,7 +290,7 @@ class _NotificationSettingsScreenState
         child: Text(
           title,
           style: GoogleFonts.poppins(
-            fontSize: 18, fontWeight: FontWeight.w600, color: Colors.black,
+            fontSize: 18, fontWeight: FontWeight.w600, color:black,
           ),
         ));
   }
@@ -318,7 +303,7 @@ class _NotificationSettingsScreenState
         title,
         style: GoogleFonts.poppins(fontSize: 16,
             fontWeight: FontWeight.w500,
-            color: !isMuted ? Colors.black : Colors.grey),
+            color: !isMuted ? black :grey),
       ),
       value: currentValue,
       onChanged: !isMuted ? onChanged : null,
@@ -328,7 +313,7 @@ class _NotificationSettingsScreenState
       // Grey color for inactive (off) state
       secondary: Icon(
         Icons.notifications,
-        color: !isMuted ?Darktheme1: Colors.grey,
+        color: !isMuted ?Darktheme1: grey,
       ),
     );
   }

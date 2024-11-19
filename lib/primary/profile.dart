@@ -73,14 +73,14 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor:white,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor:white,
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
           },
-          icon: Icon(Icons.arrow_back, size: 24, color: Colors.black),
+          icon: Icon(Icons.arrow_back, size: 24, color:black),
         ),
       ),
       body: SafeArea(
@@ -94,8 +94,8 @@ class Profile extends StatelessWidget {
                   children: [
                     CircleAvatar(
                       radius: 35,
-                      backgroundColor: Colors.black,
-                      child: Icon(Icons.maps_home_work_sharp, color: Colors.white, size: 30),
+                      backgroundColor:black,
+                      child: Icon(Icons.maps_home_work_sharp, color:white, size: 30),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(right: 160),
@@ -107,7 +107,7 @@ class Profile extends StatelessWidget {
                             style: GoogleFonts.poppins(
                               textStyle: Theme.of(context).textTheme.bodyLarge,
                               fontSize: 20,
-                              color: Colors.black,
+                              color:black,
                             ),
                           ),
                           Text(
@@ -115,7 +115,7 @@ class Profile extends StatelessWidget {
                             style: GoogleFonts.poppins(
                               textStyle: Theme.of(context).textTheme.bodySmall,
                               fontSize: 12,
-                              color: Colors.black,
+                              color:black,
                             ),
                           ),
                         ],
@@ -129,7 +129,7 @@ class Profile extends StatelessWidget {
                         );
                       },
                       icon: Icon(Icons.edit_calendar_outlined,
-                          size: 15, color: Colors.black),
+                          size: 15, color:black),
                     ),
                   ],
                 ),
@@ -153,7 +153,7 @@ class Profile extends StatelessWidget {
                         style: GoogleFonts.poppins(
                           fontSize: 15,
                           fontWeight: FontWeight.w400,
-                          color: Colors.black,
+                          color:black,
                         ),
                       ),
                       onTap: () {
@@ -190,7 +190,7 @@ class Profile extends StatelessWidget {
                     style: GoogleFonts.poppins(
                       fontSize: 15,
                       fontWeight: FontWeight.w500,
-                      color: Colors.white,
+                      color:white,
                     ),
                   ),
                 ),

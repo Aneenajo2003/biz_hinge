@@ -27,7 +27,7 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor:white,
         body: SafeArea(
             child: Center(
               child: SingleChildScrollView(
@@ -44,7 +44,7 @@ class _LoginState extends State<Login> {
                           style: GoogleFonts.poppins(
                             fontSize: 30,
                             fontWeight: FontWeight.w500,
-                            color: Colors.black,
+                            color: black,
                           ),
                         ),
                       ),
@@ -58,7 +58,7 @@ class _LoginState extends State<Login> {
                           style: GoogleFonts.poppins(
                             fontSize: 12,
                             fontWeight: FontWeight.w400,
-                            color: Colors.black,
+                            color:black,
                           ),
                         ),
                       ),
@@ -72,7 +72,7 @@ class _LoginState extends State<Login> {
                           style: GoogleFonts.poppins(
                             fontSize: 12,
                             fontWeight: FontWeight.w400,
-                            color: Colors.black,
+                            color:black,
                           ),
                         ),
                       ),
@@ -86,7 +86,7 @@ class _LoginState extends State<Login> {
                           style: GoogleFonts.poppins(
                             fontSize: 12,
                             fontWeight: FontWeight.w400,
-                            color: Colors.black,
+                            color:black,
                           ),
                         ),
                       ),
@@ -95,17 +95,17 @@ class _LoginState extends State<Login> {
                         padding: const EdgeInsets.all(8.0),
                         child: Container(
                           decoration: BoxDecoration(
-                            color: Colors.white,
+                            color: white,
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: TextFormField(
                             controller: namectrlr,
                             decoration: InputDecoration(
                               hintText: 'Shopname',
-                              hintStyle: TextStyle(color: Colors.grey),
+                              hintStyle: TextStyle(color: grey),
                               prefixIcon: Icon(Icons.maps_home_work_sharp),
                               border: OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.black),
+                                borderSide: BorderSide(color:black),
                                 borderRadius: BorderRadius.circular(20),
                               ),
                             ),
@@ -127,17 +127,17 @@ class _LoginState extends State<Login> {
                         padding: const EdgeInsets.all(8.0),
                         child: Container(
                           decoration: BoxDecoration(
-                            color: Colors.white,
+                            color:white,
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: TextFormField(
                             controller: phonectrlr,
                             decoration: InputDecoration(
                               hintText: 'Phone',
-                              hintStyle: TextStyle(color: Colors.grey),
+                              hintStyle: TextStyle(color:grey),
                               prefixIcon: Icon(Icons.phone),
                               border: OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.black),
+                                borderSide: BorderSide(color:black),
                                 borderRadius: BorderRadius.circular(20),
                               ),
                             ),
@@ -182,7 +182,7 @@ class _LoginState extends State<Login> {
                             style: GoogleFonts.poppins(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
-                              color: Colors.white,
+                              color:white,
                             ),
                           ),
                           style: ElevatedButton.styleFrom(

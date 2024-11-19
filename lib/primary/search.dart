@@ -56,9 +56,9 @@ class _SearchState extends State<Search> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor:white,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor:white,
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_sharp,
@@ -86,15 +86,15 @@ class _SearchState extends State<Search> {
               padding: const EdgeInsets.all(16.0),
               child: Container(
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color:white,
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10.0),
                   child: TextField(
                     controller: _searchController,
-                    style: const TextStyle(color: Colors.black),
-                    cursorColor: Colors.black,
+                    style: TextStyle(color:black),
+                    cursorColor:black,
                     decoration: InputDecoration(
                       prefixIcon: const Icon(
                         Icons.search,
@@ -133,7 +133,7 @@ class _SearchState extends State<Search> {
                   style: GoogleFonts.poppins(
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
-                    color: Colors.grey,
+                    color:grey,
                   ),
                 ),
               ),
@@ -168,7 +168,7 @@ class _SearchState extends State<Search> {
                             width: 80,
                             height: 80,
                             decoration: BoxDecoration(
-                              color: Colors.white,
+                              color: white,
                               borderRadius: BorderRadius.circular(15),
                               boxShadow: [
                                 BoxShadow(
@@ -185,7 +185,7 @@ class _SearchState extends State<Search> {
                                   width: 30,
                                   height: 30,
                                   decoration: BoxDecoration(
-                                    color: Colors.white,
+                                    color:white,
                                     shape: BoxShape.rectangle,
                                   ),
                                   child: Image.asset(
@@ -199,7 +199,7 @@ class _SearchState extends State<Search> {
                                   style: GoogleFonts.poppins(
                                     fontSize: 10,
                                     fontWeight: FontWeight.w500,
-                                    color: Colors.black,
+                                    color:black,
                                   ),
                                 ),
                               ],

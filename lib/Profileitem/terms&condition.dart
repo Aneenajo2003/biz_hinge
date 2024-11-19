@@ -9,9 +9,9 @@ class TermsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor:white,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: white,
         leading: IconButton(onPressed: (){
           Navigator.pop(context);
         }, icon: Icon(Icons.arrow_back )),
@@ -27,7 +27,7 @@ class TermsPage extends StatelessWidget {
           style: GoogleFonts.poppins(
             fontSize: 13,
             fontWeight: FontWeight.w500,
-            color: Colors.black,
+            color:black,
           ),
         ),
 

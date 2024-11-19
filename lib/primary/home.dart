@@ -74,9 +74,9 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor:white,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor:white,
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
           child: GestureDetector(
@@ -100,7 +100,7 @@ class Home extends StatelessWidget {
                 ".....",
                 style: GoogleFonts.kaushanScript(
                   fontSize: 25,
-                  color: Colors.green,
+                  color: maintheme1,
                   fontWeight: FontWeight.bold,
                 ),
               );
@@ -109,7 +109,7 @@ class Home extends StatelessWidget {
                 "!!!!!!",
                 style: GoogleFonts.oldStandardTt(
                   fontSize: 25,
-                  color: Colors.red,
+                  color:red,
                   fontWeight: FontWeight.bold,
                 ),
               );
@@ -122,7 +122,7 @@ class Home extends StatelessWidget {
                     "Hi $userName",
                     style: GoogleFonts.kaushanScript(
                       fontSize: 20,
-                      color: Colors.green,
+                      color: maintheme1,
                       fontWeight: FontWeight.w500,
                     ),
                   ),
@@ -131,7 +131,7 @@ class Home extends StatelessWidget {
                     style: GoogleFonts.paprika(
                       fontSize: 13,
                       fontWeight: FontWeight.w400,
-                      color: Colors.black,
+                      color:black,
                     ),
                   ),
 
@@ -209,7 +209,7 @@ class Home extends StatelessWidget {
                     style: GoogleFonts.poppins(
                       fontSize: 14,
                       fontWeight: FontWeight.w400,
-                      color: Colors.black,
+                      color:black,
                     ),
                   ),
                 ),
@@ -246,7 +246,7 @@ class Home extends StatelessWidget {
                                 width: 80,
                                 height: 80,
                                 decoration: BoxDecoration(
-                                  color: Colors.white,
+                                  color:white,
                                   borderRadius: BorderRadius.circular(15),
                                   boxShadow: [
                                     BoxShadow(
@@ -263,7 +263,7 @@ class Home extends StatelessWidget {
                                       width: 30,
                                       height: 30,
                                       decoration: BoxDecoration(
-                                        color: Colors.white,
+                                        color:white,
                                         shape: BoxShape.rectangle,
                                       ),
                                       child: Image.asset(
@@ -277,7 +277,7 @@ class Home extends StatelessWidget {
                                       style: GoogleFonts.poppins(
                                         fontSize: 10,
                                         fontWeight: FontWeight.w500,
-                                        color: Colors.black,
+                                        color:black,
                                       ),
                                     ),
                                   ],
@@ -301,7 +301,7 @@ class Home extends StatelessWidget {
                     style: GoogleFonts.poppins(
                       fontSize: 14,
                       fontWeight: FontWeight.w400,
-                      color: Colors.black,
+                      color:black,
                     ),
                   ),
                 ),
@@ -332,10 +332,10 @@ class Home extends StatelessWidget {
                               padding: const EdgeInsets.all(12),
                               decoration: BoxDecoration(
                                 border: Border.all(
-                                  color: Colors.black,
+                                  color:black,
                                   width: 0.1,
                                 ),
-                                color: Colors.white,
+                                color:white,
                                 borderRadius: BorderRadius.circular(10),
                                 boxShadow: [
                                   BoxShadow(
@@ -359,7 +359,7 @@ class Home extends StatelessWidget {
                                             style: GoogleFonts.poppins(
                                               fontSize: 12,
                                               fontWeight: FontWeight.w400,
-                                              color: Colors.black,
+                                              color:black,
                                             ),
                                             maxLines: 2,
                                             overflow: TextOverflow.ellipsis,
@@ -370,7 +370,7 @@ class Home extends StatelessWidget {
                                             style: GoogleFonts.poppins(
                                               fontSize: 10,
                                               fontWeight: FontWeight.w400,
-                                              color: Colors.black,
+                                              color:black,
                                             ),
                                           ),
                                         ],
@@ -397,21 +397,34 @@ class Home extends StatelessWidget {
                           ),
                           Positioned(
                             top: 100,
-                            left: 8,
+                            left: 20,
                             child: Container(
-                              color:Colors.white,
-                              height:20,
-                              child: IconButton(
-                                icon: Icon(Icons.add, size: 14),
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(builder: (context) => CartPage()),
-                                  );
-                                },
+                              height: 25,
+                              width: 25,
+                              decoration: BoxDecoration(
+                                color: grey,
+                                borderRadius: BorderRadius.circular(5),
+                              ),
+                              child: Center(
+                                child: IconButton(
+                                  padding: EdgeInsets.zero,
+                                  icon: Icon(
+                                    Icons.add,
+                                    size: 20,
+                                    color: Color(0xff333333),
+                                  ),
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context) => CartPage()),
+                                    );
+                                  },
+                                ),
                               ),
                             ),
-                          ),
+                          )
+
+
                         ],
                       );
                     },

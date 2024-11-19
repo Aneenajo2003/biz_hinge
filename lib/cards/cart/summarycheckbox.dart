@@ -1,3 +1,4 @@
+import 'package:b2bapp/common/app_colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -23,14 +24,14 @@ class SummaryRowWithCheckbox extends StatelessWidget {
           style: GoogleFonts.poppins(
             fontSize: 12,
             fontWeight: FontWeight.w500,
-            color: Colors.white,
+            color: white,
           ),
         ),
         Checkbox(
           value: value,
           onChanged: onChanged,
           activeColor: Colors.black54, // Green fill color
-          checkColor: Colors.white, // White tick (checkmark)
+          checkColor: white, // White tick (checkmark)
         ),
       ],
     );

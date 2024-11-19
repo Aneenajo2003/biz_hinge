@@ -36,12 +36,12 @@ class _KycVerificationPageState extends State<KycVerificationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: white,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor:white,
         elevation: 0,
         leading: IconButton(
-            icon: Icon(Icons.arrow_back, color: Colors.black),
+            icon: Icon(Icons.arrow_back, color: black),
             onPressed: () {}
         ),
         title: Text(
@@ -49,7 +49,7 @@ class _KycVerificationPageState extends State<KycVerificationPage> {
           style: TextStyle(fontFamily: 'Poppins',
             fontWeight: FontWeight.bold,
             fontSize: 18,
-            color: Colors.black,
+            color:black,
           ),
         ),
         centerTitle: true,
@@ -63,20 +63,20 @@ class _KycVerificationPageState extends State<KycVerificationPage> {
               "For completion of registration,\nplease upload ANY ONE of the following\ndocument",
               style: TextStyle(fontFamily: 'Poppins',
                 fontSize: 16,
-                color: Colors.black,
+                color:black,
               ),
             ),
             SizedBox(height: 10),
             Row(
               children: [
-                IconButton(onPressed: (){}, icon: Icon(Icons.info_outline, size: 20, color: Color(0xff677294)),),
+                IconButton(onPressed: (){}, icon: Icon(Icons.info_outline, size: 20, color: kyc),),
                 SizedBox(width: 8),
                 Text(
                   "Why this is needed?",
                   style:
                   TextStyle(fontFamily: 'Poppins',
                     fontSize: 14,
-                    color:  Color(0xff677294),
+                    color: kyc,
                   ),
                 ),
               ],
@@ -99,7 +99,7 @@ class _KycVerificationPageState extends State<KycVerificationPage> {
                         : "Upload Ownership Certificate",
                     style: TextStyle(fontFamily: 'Poppins',
                         fontSize: 14,
-                        color: Colors.black,
+                        color: black,
                         fontWeight: FontWeight.bold
                     ),
                   ),
@@ -124,7 +124,7 @@ class _KycVerificationPageState extends State<KycVerificationPage> {
                         : "Upload GST Certificate",
                     style: TextStyle(fontFamily: 'Poppins',
                         fontSize: 14,
-                        color: Colors.black,
+                        color: black,
                         fontWeight: FontWeight.bold
                     ),
                   ),
@@ -149,7 +149,7 @@ class _KycVerificationPageState extends State<KycVerificationPage> {
                     "I agree with giving above documents",
                     style: TextStyle(fontFamily: 'Poppins',
                       fontSize: 14,
-                      color:  Color(0xff677294),
+                      color:  kyc,
                     ),
                   ),
                 ),
@@ -209,7 +209,7 @@ class _KycVerificationPageState extends State<KycVerificationPage> {
                         style: TextStyle(fontFamily: 'Poppins',
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white,
+                          color: white,
                         ),
                       ),
                     ),

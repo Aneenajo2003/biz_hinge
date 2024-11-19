@@ -1,3 +1,4 @@
+import 'package:b2bapp/common/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -5,12 +6,12 @@ class DeleteAccountPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: white,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: white,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: Icon(Icons.arrow_back, color: black),
           onPressed: () => Navigator.pop(context),
         ),
         title: Text(
@@ -18,7 +19,7 @@ class DeleteAccountPage extends StatelessWidget {
           style: GoogleFonts.poppins(
             fontWeight: FontWeight.bold,
             fontSize: 18,
-            color: Colors.black,
+            color:black,
           ),
         ),
         centerTitle: true,
@@ -34,7 +35,7 @@ class DeleteAccountPage extends StatelessWidget {
               style: GoogleFonts.poppins(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
-                color: Colors.black,
+                color: black,
               ),
             ),
             SizedBox(height: 8),
@@ -50,14 +51,14 @@ class DeleteAccountPage extends StatelessWidget {
             // Warning Section
             Row(
               children: [
-                Icon(Icons.warning_amber_rounded, color: Colors.red, size: 20),
+                Icon(Icons.warning_amber_rounded, color: red, size: 20),
                 SizedBox(width: 8),
                 Expanded(
                   child: Text(
                     "Any ongoing orders or payments will be canceled, and related parties may be notified.",
                     style: GoogleFonts.poppins(
                       fontSize: 14,
-                      color: Colors.red,
+                      color: red,
                     ),
                   ),
                 ),
@@ -90,7 +91,7 @@ class DeleteAccountPage extends StatelessWidget {
                               onPressed: () => Navigator.pop(context),
                               child: Text(
                                 "Cancel",
-                                style: GoogleFonts.poppins(color: Colors.grey),
+                                style: GoogleFonts.poppins(color: grey),
                               ),
                             ),
                             TextButton(
@@ -105,7 +106,7 @@ class DeleteAccountPage extends StatelessWidget {
                               },
                               child: Text(
                                 "Delete",
-                                style: GoogleFonts.poppins(color: Colors.red),
+                                style: GoogleFonts.poppins(color: red),
                               ),
                             ),
                           ],
@@ -113,7 +114,7 @@ class DeleteAccountPage extends StatelessWidget {
                       );
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.red,
+                      backgroundColor:red,
                       padding: EdgeInsets.symmetric(horizontal: 30, vertical: 12),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
@@ -124,7 +125,7 @@ class DeleteAccountPage extends StatelessWidget {
                       style: GoogleFonts.poppins(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
-                        color: Colors.white,
+                        color:white,
                       ),
                     ),
                   ),
@@ -139,7 +140,7 @@ class DeleteAccountPage extends StatelessWidget {
                       style: GoogleFonts.poppins(
                         fontSize: 16,
                         fontWeight: FontWeight.w500,
-                        color: Colors.grey,
+                        color:grey,
                       ),
                     ),
                   ),

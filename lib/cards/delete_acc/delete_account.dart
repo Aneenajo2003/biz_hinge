@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../../common/app_colors.dart';
 import 'confirm_del.dart';
 
 import 'deleteclz.dart';
@@ -21,12 +22,12 @@ class _DeleteeeState extends State<Deleteee> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: white,
       appBar: AppBar(
-        backgroundColor: Colors.red,
+        backgroundColor: red,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black), onPressed: () {
+          icon: Icon(Icons.arrow_back, color:black), onPressed: () {
             Navigator.pop(context);
         },
 
@@ -36,7 +37,7 @@ class _DeleteeeState extends State<Deleteee> {
           style: TextStyle(fontFamily: 'Poppins',
             fontWeight: FontWeight.bold,
             fontSize: 18,
-            color: Colors.black,
+            color:black,
           ),
         ),
         centerTitle: true,
@@ -50,7 +51,7 @@ class _DeleteeeState extends State<Deleteee> {
               style: TextStyle(fontFamily: 'Poppins',
                 fontWeight: FontWeight.bold,
                 fontSize: 13,
-                color: Colors.black,
+                color:black,
               ),
             ),
             CheckboxListTile(
@@ -65,7 +66,7 @@ class _DeleteeeState extends State<Deleteee> {
                 style: TextStyle(fontFamily: 'Poppins',
                   fontWeight: FontWeight.bold,
                   fontSize: 13,
-                  color: Colors.black,
+                  color:black,
                 ),
               ),
             ),
@@ -81,7 +82,7 @@ class _DeleteeeState extends State<Deleteee> {
                 style: TextStyle(fontFamily: 'Poppins',
                   fontWeight: FontWeight.bold,
                   fontSize: 13,
-                  color: Colors.black,
+                  color:black,
                 ),
               ),
             ),
@@ -92,22 +93,22 @@ class _DeleteeeState extends State<Deleteee> {
                   noPastServices = value!;
                 });
               },
-              title: const Text(
+              title: Text(
                 "I acknowledge that I will not be able to return/replace or seek any service regarding past orders.",
                 style: TextStyle(fontFamily: 'Poppins',
                   fontWeight: FontWeight.bold,
                   fontSize: 13,
-                  color: Colors.black,
+                  color:black,
                 ),
               ),
             ),
             const SizedBox(height: 20),
-            const Text(
+             Text(
               "Please tell us why you're leaving us:",
               style: TextStyle(fontFamily: 'Poppins',
                 fontWeight: FontWeight.bold,
                 fontSize: 13,
-                color: Colors.black,
+                color:black,
               ),
             ),
             const SizedBox(height: 10),
@@ -142,13 +143,13 @@ class _DeleteeeState extends State<Deleteee> {
                     MaterialPageRoute(builder: (context) => DeleteAccountPage()),
                   );
                 },
-                child: const Text("Continue",style: TextStyle(fontFamily: 'Poppins',
+                child:  Text("Continue",style: TextStyle(fontFamily: 'Poppins',
                   fontWeight: FontWeight.bold,
                   fontSize: 13,
-                  color: Colors.white,
+                  color: white,
                 ),),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.red,
+                  backgroundColor: red,
                   padding: const EdgeInsets.symmetric(
                       horizontal: 40, vertical: 15),
 

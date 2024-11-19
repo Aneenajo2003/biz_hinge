@@ -23,10 +23,10 @@ class OrderDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor:white,
       appBar: AppBar(
         title: Text('Order Details'),
-        backgroundColor: Colors.white,
+        backgroundColor:white,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -35,7 +35,7 @@ class OrderDetailScreen extends StatelessWidget {
           itemBuilder: (context, index) {
             final item = items[index];
             return Card(
-              color: Colors.white,
+              color:white,
               elevation: 4,
               margin: const EdgeInsets.symmetric(vertical: 8),
               shape: RoundedRectangleBorder(

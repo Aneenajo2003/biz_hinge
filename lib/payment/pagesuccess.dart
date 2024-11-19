@@ -75,7 +75,7 @@ class _OrderConfirmationScreenState extends State<OrderConfirmationScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor:white,
       appBar: AppBar(
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
@@ -87,7 +87,7 @@ class _OrderConfirmationScreenState extends State<OrderConfirmationScreen>
           },
         ),
         elevation: 0,
-        backgroundColor: Colors.white,
+        backgroundColor:white,
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -115,7 +115,7 @@ class _OrderConfirmationScreenState extends State<OrderConfirmationScreen>
               style: GoogleFonts.poppins(
                 fontSize: 17,
                 fontWeight: FontWeight.w500,
-                color: Colors.black,
+                color:black,
               ),
             ),
             SizedBox(height: 10),
@@ -125,7 +125,7 @@ class _OrderConfirmationScreenState extends State<OrderConfirmationScreen>
               style: GoogleFonts.poppins(
                 fontSize: 13,
                 fontWeight: FontWeight.w500,
-                color: Colors.grey,
+                color:grey,
               ),
             ),
             SizedBox(height: 20),
@@ -152,7 +152,7 @@ class _OrderConfirmationScreenState extends State<OrderConfirmationScreen>
                   style: GoogleFonts.poppins(
                     fontSize: 17,
                     fontWeight: FontWeight.w600,
-                    color: Colors.black,
+                    color:black,
                   ),
                 ),
               ],
@@ -205,7 +205,7 @@ class _OrderConfirmationScreenState extends State<OrderConfirmationScreen>
                               style: GoogleFonts.poppins(
                                 fontSize: 12,
                                 fontWeight: FontWeight.w400,
-                                color: Colors.grey,
+                                color:grey,
                               ),
                             ),
                             Text(
@@ -223,7 +223,7 @@ class _OrderConfirmationScreenState extends State<OrderConfirmationScreen>
                               style: GoogleFonts.poppins(
                                 fontSize: 12,
                                 fontWeight: FontWeight.w400,
-                                color: Colors.grey,
+                                color:grey,
                               ),
                             ),
                             Text(
@@ -292,7 +292,7 @@ class _OrderConfirmationScreenState extends State<OrderConfirmationScreen>
                   style: GoogleFonts.poppins(
                     fontSize: 12,
                     fontWeight: FontWeight.w500,
-                    color: Colors.white,
+                    color:white,
                   ),
                 ),
               ),
@@ -321,7 +321,7 @@ class OrderInfoColumn extends StatelessWidget {
           style: GoogleFonts.poppins(
             fontSize: 12,
             fontWeight: FontWeight.w400,
-            color: Colors.grey,
+            color:grey,
           ),
         ),
         SizedBox(height: 5),

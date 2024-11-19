@@ -77,10 +77,10 @@ class _ChangeAddressState extends State<ChangeAddress> {
                           hintStyle: GoogleFonts.montserrat(
                             textStyle: Theme.of(context).textTheme.displayLarge,
                             fontSize: 13,
-                            color: Colors.black,
+                            color: black,
                           ),
                           border: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.black,width: 10),
+                            borderSide: BorderSide(color: black,width: 10),
                             borderRadius: BorderRadius.circular(5),
                           ),
                         ),
@@ -96,10 +96,10 @@ class _ChangeAddressState extends State<ChangeAddress> {
                           hintStyle: GoogleFonts.montserrat(
                             textStyle: Theme.of(context).textTheme.displayLarge,
                             fontSize: 13,
-                            color: Colors.black,
+                            color: black,
                           ),
                           border: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.black,width: 10),
+                            borderSide: BorderSide(color: black,width: 10),
                             borderRadius: BorderRadius.circular(5),
                           ),
                         ),
@@ -116,7 +116,7 @@ class _ChangeAddressState extends State<ChangeAddress> {
                             BorderRadius.circular(5),
                             border: Border.all(
                                 width: 1,
-                                color: Colors.black),
+                                color: black),
                           ),
                           padding: EdgeInsets.only(left: 8),
                           child: TextFormField(
@@ -126,7 +126,7 @@ class _ChangeAddressState extends State<ChangeAddress> {
                               hintStyle: GoogleFonts.montserrat(
                                 textStyle: Theme.of(context).textTheme.displayLarge,
                                 fontSize: 12,
-                                color: Colors.black,
+                                color: black,
                               ),
                               border: InputBorder.none,
                             ),
@@ -147,7 +147,7 @@ class _ChangeAddressState extends State<ChangeAddress> {
 
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
-                          border: Border.all(width: 1, color: Colors.black),
+                          border: Border.all(width: 1, color: black),
                         ),
                         padding: EdgeInsets.only(left: 8),
                         child: TextFormField(
@@ -157,7 +157,7 @@ class _ChangeAddressState extends State<ChangeAddress> {
                             hintStyle: GoogleFonts.montserrat(
                               textStyle: Theme.of(context).textTheme.displayLarge,
                               fontSize: 12,
-                              color: Colors.black,
+                              color: black,
                             ),
                             border: InputBorder.none,
                           ),
@@ -175,7 +175,7 @@ class _ChangeAddressState extends State<ChangeAddress> {
                                     5),
                                 border: Border.all(
                                     width: 1,
-                                    color: Colors.black),
+                                    color: black),
                               ),
                               padding: EdgeInsets.only(left: 8),
                               child: TextFormField(
@@ -186,7 +186,7 @@ class _ChangeAddressState extends State<ChangeAddress> {
                                     textStyle:
                                     Theme.of(context).textTheme.displayLarge,
                                     fontSize: 12,
-                                    color: Colors.black,
+                                    color: black,
                                   ),
                                   border: InputBorder.none,
                                 ),
@@ -204,7 +204,7 @@ class _ChangeAddressState extends State<ChangeAddress> {
                                     6),
                                 border: Border.all(
                                     width: 1,
-                                    color: Colors.black),
+                                    color:black),
                               ),
                               padding: EdgeInsets.only(left: 8),
                               child: TextFormField(
@@ -215,7 +215,7 @@ class _ChangeAddressState extends State<ChangeAddress> {
                                     textStyle:
                                     Theme.of(context).textTheme.displayLarge,
                                     fontSize: 12, // ScreenUtil applied here
-                                    color: Colors.black,
+                                    color: black,
                                   ),
                                   border: InputBorder.none,
                                 ),
@@ -233,7 +233,7 @@ class _ChangeAddressState extends State<ChangeAddress> {
                               6),
                           border: Border.all(
                               width: 1,
-                              color: Colors.black),
+                              color: black),
                         ),
                         padding: EdgeInsets.only(left: 8),
                         child: TextFormField(
@@ -244,7 +244,7 @@ class _ChangeAddressState extends State<ChangeAddress> {
                               textStyle:
                               Theme.of(context).textTheme.displayLarge,
                               fontSize: 12,
-                              color: Colors.black,
+                              color: black,
                             ),
                             border: InputBorder.none,
                           ),
@@ -259,7 +259,7 @@ class _ChangeAddressState extends State<ChangeAddress> {
                           BorderRadius.circular(5),
                           border: Border.all(
                               width: 1,
-                              color: Colors.black),
+                              color: black),
                         ),
                         padding: EdgeInsets.only(left: 8),
                         child: TextFormField(
@@ -269,7 +269,7 @@ class _ChangeAddressState extends State<ChangeAddress> {
                             hintStyle: GoogleFonts.montserrat(
                               textStyle: Theme.of(context).textTheme.displayLarge,
                               fontSize: 12,
-                              color: Colors.black,
+                              color:black,
                             ),
                             border: InputBorder.none,
                           ),
@@ -290,7 +290,7 @@ class _ChangeAddressState extends State<ChangeAddress> {
                                       8),
                                   border: Border.all(
                                       width: 1,
-                                      color: Colors.black),
+                                      color: black),
                                 ),
                                 child: ElevatedButton.icon(
                                   onPressed: toggleHome,
@@ -303,13 +303,13 @@ class _ChangeAddressState extends State<ChangeAddress> {
                                     "Home",style: GoogleFonts.montserrat(
                                     textStyle: Theme.of(context).textTheme.displayLarge,
                                     fontSize: 12,
-                                    color: Colors.black,
+                                    color: black,
                                   ),
                                   ),
                                   style: ElevatedButton.styleFrom(
                                     backgroundColor: isHomeSelected
                                         ? maintheme1
-                                        : Colors.white,
+                                        : white,
                                     padding: EdgeInsets.symmetric(
                                         vertical: 1,
                                         horizontal: 1), // Responsive padding
@@ -330,7 +330,7 @@ class _ChangeAddressState extends State<ChangeAddress> {
                                       8),
                                   border: Border.all(
                                       width: 1,
-                                      color: Colors.black),
+                                      color:black),
                                 ),
                                 child: ElevatedButton.icon(
                                   onPressed:toggleOffice,
@@ -346,7 +346,7 @@ class _ChangeAddressState extends State<ChangeAddress> {
                                   style: ElevatedButton.styleFrom(
                                     backgroundColor: isOfficeSelected
                                         ? maintheme1
-                                        : Colors.white,
+                                        : white,
                                     padding: EdgeInsets.symmetric(
                                         vertical: 1, horizontal: 1),
                                     shape: RoundedRectangleBorder(
@@ -369,7 +369,7 @@ class _ChangeAddressState extends State<ChangeAddress> {
                           child: Text("Save Address",style: GoogleFonts.poppins(
                               fontSize: 12,
                               fontWeight: FontWeight.w500,
-                              color: Colors.white
+                              color: white
                           ),),
                           style: ElevatedButton.styleFrom(
                               backgroundColor: Darktheme1,

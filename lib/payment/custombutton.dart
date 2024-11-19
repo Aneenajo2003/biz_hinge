@@ -36,12 +36,12 @@ class CustomContainer extends StatelessWidget {
                 child: Row(
                   children: [
                     Icon(Icons.account_balance_wallet,
-                        color: Colors.white, size: 20),
+                        color:white, size: 20),
                     SizedBox(width: 10),
                     Expanded(
                       child: Text(
                         'your account has been credited with 10 leaf coins',
-                        style: TextStyle(color: Colors.white, fontSize: 10),
+                        style: TextStyle(color:white, fontSize: 10),
                       ),
                     ),
                   ],
@@ -74,7 +74,7 @@ class CustomContainer extends StatelessWidget {
                       },
                       child: Text(
                         'back to home',
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(color:white),
                       ),
                     ),
                   ],

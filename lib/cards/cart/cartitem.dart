@@ -1,3 +1,4 @@
+import 'package:b2bapp/common/app_colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -31,7 +32,7 @@ class CartItemWidget extends StatelessWidget {
                 height: 80,
 
                 decoration: BoxDecoration(
-                  color: Colors.grey[200],
+                  color: grey,
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Image.asset("assests/image/img_10.png",fit: BoxFit.fill,),// Placeholder for image

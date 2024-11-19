@@ -10,6 +10,15 @@ const Color lighttheme39 = Color(0x63EBC31);
 const Color lighttheme79 = Color(0xCA6EBC31);
 const Color lighttheme42 = Color(0x6B6EBC31);
 const Color lighttheme50 = Color(0x7F6EBC31);
+const Color kyc =Color(0xff677294);
+
 Color orange = Colors.orange;
+Color white = Colors.white;
+Color black = Colors.black;
+Color grey = Colors.grey;
+Color red = Colors.red;
+
+
+
 
 

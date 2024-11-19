@@ -16,7 +16,7 @@ class HelpCenterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor:white,
       appBar: AppBar(
         title: Text(
           'Help Center',
@@ -24,7 +24,7 @@ class HelpCenterPage extends StatelessWidget {
 
               fontWeight: FontWeight.w500),
         ),
-        backgroundColor:Colors.white,
+        backgroundColor:white,
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -62,14 +62,14 @@ class HelpCenterPage extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Icon(Icons.headset_mic, size: 60, color: Colors.white),
+          Icon(Icons.headset_mic, size: 60, color: white),
           SizedBox(height: 10),
           Text(
             'We\'d Love to Hear From You!',
             style: GoogleFonts.poppins(  // Using Poppins font
               fontSize: 22,
               fontWeight: FontWeight.bold,
-              color: Colors.white,
+              color:white,
             ),
             textAlign: TextAlign.center,
           ),
@@ -131,7 +131,7 @@ class HelpCenterPage extends StatelessWidget {
 
   // Helper Widget to create Contact Option Row
   Widget _contactOption(IconData icon, String title, String url, String description) {
-    return Card(color: Colors.white,
+    return Card(color:white,
       margin: EdgeInsets.symmetric(vertical: 8),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       elevation: 3,
@@ -143,7 +143,7 @@ class HelpCenterPage extends StatelessWidget {
         ),
         subtitle: Text(
           description,
-          style: GoogleFonts.poppins(fontSize: 14, color: Colors.grey),
+          style: GoogleFonts.poppins(fontSize: 14, color:grey),
         ),
         onTap: () => _launchURL(url),
       ),

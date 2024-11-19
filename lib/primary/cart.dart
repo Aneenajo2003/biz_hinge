@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../cards/cart/cartview.dart';
 import '../cards/cart/cartitem.dart';
+import '../common/app_colors.dart';
 import '../main.dart';
 
 class CartPage extends StatefulWidget {
@@ -27,7 +28,7 @@ class _CartPageState extends State<CartPage> {
     int subtotal = calculateSubtotal();
 
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor:white,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         title: Text(

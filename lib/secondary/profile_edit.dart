@@ -9,7 +9,7 @@ class EditProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: white,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -32,7 +32,7 @@ class EditProfile extends StatelessWidget {
                     padding: const EdgeInsets.only(top: 150),
                     child: CircleAvatar(
                       radius: 60,
-                      backgroundColor: Colors.white,
+                      backgroundColor: white,
                       child: Align(
                         alignment: Alignment.bottomRight,
                         child: Container(
@@ -188,7 +188,7 @@ class EditProfile extends StatelessWidget {
                     style: GoogleFonts.poppins(
                       fontSize: 15,
                       fontWeight: FontWeight.w500,
-                      color: Colors.white,
+                      color: white,
                     ),
                   ),
                 ),
